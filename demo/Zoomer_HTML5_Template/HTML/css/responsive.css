@@ -1,0 +1,1667 @@
+/* CSS INFORMATION
+        - Project: Media Star
+        - Author: FelixPlus - www.felixplus.com
+        - Last Update: 05/06/2013
+*/
+
+@media
+only screen and (-webkit-min-device-pixel-ratio: 2),
+only screen and (   min--moz-device-pixel-ratio: 2),
+only screen and (     -o-min-device-pixel-ratio: 2/1),
+only screen and (        min-device-pixel-ratio: 2),
+only screen and (                min-resolution: 192dpi),
+only screen and (                min-resolution: 2dppx) {
+
+a.button-close {
+	background: url(../images/icons/red-close@2x.png) no-repeat;
+	background-size:8px 8px;
+}
+.alert-box-info {
+	background-image: url(../images/icons/blue-alert@2x.png);
+	background-size:27px 27px;
+}
+.alert-box-info a.button-close {
+	background: url(../images/icons/blue2-close@2x.png) no-repeat !important;
+	background-size:8px 8px;
+}
+.alert-box-success {
+	background-image: url(../images/icons/green-alert@2x.png);
+	background-size:27px 27px;
+}
+.alert-box-success a.button-close {
+	background: url(../images/icons/green-close@2x.png) no-repeat !important;
+	background-size:8px 8px;
+}
+.alert-box-warning {
+	background-image: url(../images/icons/orange-alert@2x.png);
+	background-size:27px 27px;
+}
+.alert-box-warning a.button-close {
+	background: url(../images/icons/yellow-close@2x.png) no-repeat !important;
+	background-size:8px 8px;
+}
+.alert-box-error {
+	background-image: url(../images/icons/red-alert@2x.png);
+	background-size:27px 27px;
+}
+#logo {
+	background:url(../placeholders/sub-logo@2x.png) top left no-repeat;
+	background-size:180px 30px;
+}
+
+#arrow a  {
+		background-image:url(../images/icons/arrow@2x.png);
+		background-size:28px 33px;
+}
+
+.timeline-item .entry-body header .triangle {
+	background:url(../images/icons/triangle-timeline@2x.png) no-repeat 0 0;
+	background-size:10px 20px;
+}
+
+.timeline-item.quote-post .entry-body .entry-content p {
+	background:url(../images/icons/quote-icon@2x.png) no-repeat 0 5px;
+	background-size:22px 20px;
+}
+
+.flx-testimonial li .testimonial-content p span {
+	background:url(../images/icons/big-quote-icon@2x.png) no-repeat 0 0;
+	background-size:43px 36px;
+}
+
+.flx-w-h {
+	background:url(../images/icons/alarm-icon@2x.png) no-repeat 0 5px;
+	background-size:16px 15px;
+}
+
+.flx-add {
+	background:url(../images/icons/add-icon@2x.png) no-repeat 0 5px;
+	background-size:16px 14px;
+}
+
+.flx-tag-social .tag-box {
+	background:url(../images/icons/tag-icon.png@2x) no-repeat 0 8px;
+	background-size:34px 28px;
+}
+#flx-twitter {
+	background:#f9f9f9 url(../images/background/bg-twitter@2x.png) center center no-repeat;
+	background-size:94px 94px;
+}
+.blog-post-slider .flex-direction-nav .flex-next,
+.news-slider .flex-next {
+	background-image:url(../images/background/flex-next@2x.png);
+	background-size:11px 18px;
+}
+.blog-post-slider .flex-direction-nav .flex-prev,
+.news-slider .flex-prev {
+	background-image:url(../images/background/flex-prev@2x.png);
+	background-size:11px 18px;
+}
+.project-slider .flex-direction-nav .flex-next {
+	background-image:url(../images/background/big-flex-next@2x.png);
+	background-size:11px 18px;
+}
+.project-slider .flex-direction-nav .flex-prev {
+	background-image:url(../images/background/big-flex-prev@2x.png);
+	background-size:11px 18px;
+}
+#cboxClose{
+	background:url(../images/icons/lightbox-close-icon@2x.png) no-repeat 0 0;
+	background-size:24px 24px;
+}
+
+
+
+}
+
+@media only screen and (min-width: 1024px) and (max-width: 1083px) {
+
+/* =========================================================
+***************************Columns**************************
+============================================================ */
+.wrapper {
+	width: 980px;
+}
+
+/* =========================================================
+*****************************Menu***************************
+============================================================ */
+
+#navigation #menu li a {
+	padding:15px 20px;
+}
+	
+#logo {
+	width:180px;
+}
+
+/* =========================================================
+****************************About***************************
+============================================================ */
+.flx-intro-box {
+	margin-bottom:40px;
+}
+
+/*-----------------Carousel------------------*/
+.flx-our-team-widget .our-team-thumb .mask {
+	width:144px;
+	height:144px;
+}
+.flx-our-team-widget .our-team-thumb .mask a {
+	margin-top:44px;
+}
+.flx-our-team-widget .our-team-thumb img {
+	width:150px;
+	height:150px;
+}
+
+/* =========================================================
+*************************Our Services***********************
+============================================================ */
+#ourservices {
+	padding-bottom:55px;
+}
+
+.flx-service {
+	margin-left:-15px;
+}
+.flx-service li {
+	margin:30px 0 0 15px;
+}
+
+/* =========================================================
+****************************Static**************************
+============================================================ */
+#static {
+	padding-bottom:60px;
+}
+
+.flx-static li {
+	margin:0 0 0 70px;
+}
+
+/* =========================================================
+**************************Logos client**********************
+============================================================ */
+
+/* =========================================================
+****************************Project*************************
+============================================================ */
+.project-slider .slide-img {
+	width:600px;
+}
+
+/* =========================================================
+**************************News Section**********************
+============================================================ */
+.sidebar {
+	margin-left:40px;
+}
+
+/* =========================================================
+***************************Tag line*************************
+============================================================ */
+
+/* =========================================================
+*************************Testimonials***********************
+============================================================ */
+
+.flx-testimonial li {
+	margin:35px 55px;
+}
+
+/* =========================================================
+**************************Contact*************************
+============================================================ */
+#contact-left {
+	margin:10px 20px 0 0;
+}
+
+
+}
+
+
+@media only screen and (min-width: 980px) and (max-width: 1023px) {
+
+/* =========================================================
+***************************Columns**************************
+============================================================ */
+.wrapper {
+	width: 940px;
+}
+
+/* =========================================================
+*****************************Menu***************************
+============================================================ */
+
+#navigation #menu li a,
+.is-sticky #navigation.cbp-af-header-shrink #menu li a {
+	padding:10px 15px;
+}
+#navigation #menu li a {
+	margin-top:20px;
+}
+	
+#logo {
+	width:180px;
+}
+
+/* =========================================================
+****************************About***************************
+============================================================ */
+.flx-intro-box {
+	margin-bottom:40px;
+}
+#about-us .about-title {
+	font-size:36px;
+}
+
+/*-----------------Carousel------------------*/
+.flx-our-team-widget .our-team-thumb .mask {
+	width:134px;
+	height:134px;
+}
+.flx-our-team-widget .our-team-thumb .mask a {
+	margin-top:40px;
+}
+.flx-our-team-widget .our-team-thumb img {
+	width:140px;
+	height:140px;
+}
+
+/* =========================================================
+*************************Our Services***********************
+============================================================ */
+#ourservices {
+	padding-bottom:55px;
+}
+
+.flx-service {
+	margin-left:-15px;
+}
+.flx-service li {
+	margin:30px 0 0 15px;
+	width:303px;
+}
+
+/* =========================================================
+****************************Static**************************
+============================================================ */
+#static {
+	padding-bottom:60px;
+}
+
+.flx-static li {
+	margin:0 0 0 60px;
+}
+
+/* =========================================================
+**************************Logos client**********************
+============================================================ */
+#logo-clients ul li {
+	margin:0 0 0 23px;
+}
+
+/* =========================================================
+**************************Portfolio*************************
+============================================================ */
+.p-left-col {
+	width:560px;
+}
+
+/* =========================================================
+****************************Project*************************
+============================================================ */
+.project-slider .slide-img {
+	width:580px;
+}
+.project-slider .slide-content {
+	width:340px;
+}
+
+/* =========================================================
+**************************News Section**********************
+============================================================ */
+.sidebar {
+	margin-left:30px;
+}
+.main-col {
+	width:660px;
+}
+.timeline-item .timeline-icon {
+	width:115px;
+}
+.timeline-item .entry-body {
+	width:545px;
+}
+
+/* =========================================================
+***************************Tag line*************************
+============================================================ */
+
+/* =========================================================
+*************************Testimonials***********************
+============================================================ */
+.flx-testimonial {
+	margin:0 -45px;
+}
+.flx-testimonial li {
+	margin:35px 45px;
+	width:425px;
+}
+.flx-testimonial li .testimonial-avatar {
+	margin-right:20px;
+}
+.flx-testimonial li .testimonial-content {
+	width:325px;
+}
+
+/* =========================================================
+**************************Contact*************************
+============================================================ */
+#contact-left {
+	margin:10px 20px 0 0;
+	width:440px;
+}
+#contact-right {
+	width:480px;
+}
+
+
+}
+
+
+@media only screen and (min-width: 800px) and (max-width: 979px) {
+
+/* =========================================================
+***************************Columns**************************
+============================================================ */
+.wrapper {
+	width: 760px;
+}
+
+/* =========================================================
+*****************************Menu***************************
+============================================================ */
+
+#navigation #menu li a,
+.is-sticky #navigation.cbp-af-header-shrink #menu li a {
+	padding:10px 15px;
+}
+#navigation #menu {
+	display:none;
+}
+#navigation .wrapper-dropdown-3 {
+	display:block;
+}
+	
+#logo {
+	width:180px;
+}
+
+/* =========================================================
+****************************About***************************
+============================================================ */
+.flx-intro-box {
+	margin-bottom:40px;
+}
+#about-us .about-title {
+	font-size:36px;
+}
+
+/*-----------------Carousel------------------*/
+.flx-our-team-widget .our-team-thumb .mask {
+	width:89px;
+	height:89px;
+}
+.flx-our-team-widget .our-team-thumb .mask a {
+	margin-top:23px;
+	width:45px;
+	height:45px;
+	line-height:46px;
+}
+.flx-our-team-widget .our-team-thumb img {
+	width:95px;
+	height:95px;
+}
+
+.right-col {
+	margin-left:15px;
+	width:480px;
+}
+
+/* =========================================================
+*************************Our Services***********************
+============================================================ */
+#ourservices {
+	padding-bottom:55px;
+}
+
+.flx-service {
+	margin-left:-15px;
+}
+.flx-service li {
+	margin:30px 0 0 15px;
+	width:243px;
+}
+
+/* =========================================================
+****************************Static**************************
+============================================================ */
+#static {
+	padding-bottom:60px;
+}
+
+.flx-static li {
+	margin:0 0 0 40px;
+	width:120px;
+}
+.flx-static li p {
+	height:100px;
+}
+.flx-static li span.static-number {
+	width:100px;
+	margin-left:-50px;
+	top:50px;
+}
+
+/* =========================================================
+**************************Logos client**********************
+============================================================ */
+#logo-clients ul li {
+	margin:0 0 0 20px;
+	width:110px;
+}
+
+/* =========================================================
+**************************Portfolio*************************
+============================================================ */
+.p-left-col {
+	width:380px;
+}
+.p-left-col ul {
+	display:block;
+}
+
+/* =========================================================
+****************************Project*************************
+============================================================ */
+.project-slider .slide-img {
+	width:440px;
+}
+.project-slider .slide-content {
+	width:300px;
+}
+
+/* =========================================================
+**************************News Section**********************
+============================================================ */
+.sidebar {
+	margin-left:30px;
+}
+.main-col {
+	width:480px;
+}
+.timeline-item .timeline-icon {
+	width:115px;
+}
+.timeline-item .entry-body {
+	width:365px;
+}
+.timeline-item .entry-body .entry-thumb {
+	margin-right:0;
+	margin-bottom:20px;
+	width:100%;
+}
+
+.news-page {
+	width:760px;
+}
+.about-author .author-content {
+	width:508px;
+}
+.comment-body {
+	width:546px;
+}
+#comments .comments-list .children .comment-body {
+	width:456px;
+}
+
+/* =========================================================
+***************************Tag line*************************
+============================================================ */
+
+/* =========================================================
+*************************Testimonials***********************
+============================================================ */
+.flx-testimonial {
+	margin:0 -15px;
+}
+.flx-testimonial li {
+	margin:35px 15px;
+	width:365px;
+}
+.flx-testimonial li .testimonial-avatar {
+	margin-right:20px;
+}
+.flx-testimonial li .testimonial-content {
+	width:265px;
+}
+
+/* =========================================================
+**************************Contact*************************
+============================================================ */
+#contact-left {
+	margin:10px 20px 0 0;
+	width:350px;
+}
+#contact-right {
+	width:390px;
+}
+
+
+}
+
+@media only screen and (min-width: 768px) and (max-width: 799px) {
+
+/* =========================================================
+***************************Columns**************************
+============================================================ */
+.wrapper {
+	width: 700px;
+}
+
+/* =========================================================
+*****************************Menu***************************
+============================================================ */
+
+#navigation #menu li a,
+.is-sticky #navigation.cbp-af-header-shrink #menu li a {
+	padding:10px 15px;
+}
+#navigation #menu {
+	display:none;
+}
+#navigation .wrapper-dropdown-3 {
+	display:block;
+}
+	
+#logo {
+	width:180px;
+}
+
+/* =========================================================
+****************************About***************************
+============================================================ */
+.flx-intro-box {
+	margin-bottom:40px;
+}
+#about-us .about-title {
+	font-size:36px;
+}
+
+/*-----------------Carousel------------------*/
+.flx-our-team-widget .our-team-thumb .mask {
+	width:74px;
+	height:74px;
+}
+.flx-our-team-widget .our-team-thumb .mask a {
+	margin-top:17px;
+	width:40px;
+	height:40px;
+	line-height:40px;
+}
+.flx-our-team-widget .our-team-thumb img {
+	width:80px;
+	height:80px;
+}
+
+.right-col {
+	margin-left:15px;
+	width:450px;
+}
+
+/* =========================================================
+*************************Our Services***********************
+============================================================ */
+#ourservices {
+	padding-bottom:55px;
+}
+
+.flx-service {
+	margin-left:-15px;
+}
+.flx-service li {
+	margin:30px 0 0 15px;
+	width:223px;
+}
+
+/* =========================================================
+****************************Static**************************
+============================================================ */
+#static {
+	padding-bottom:60px;
+}
+
+.flx-static li {
+	margin:0 0 0 25px;
+	width:120px;
+}
+.flx-static li p {
+	height:100px;
+}
+.flx-static li span.static-number {
+	width:100px;
+	margin-left:-50px;
+	top:50px;
+}
+
+/* =========================================================
+**************************Logos client**********************
+============================================================ */
+#logo-clients ul li {
+	margin:0 0 0 20px;
+	width:100px;
+}
+
+/* =========================================================
+**************************Portfolio*************************
+============================================================ */
+.p-left-col {
+	width:320px;
+}
+.p-left-col ul {
+	display:block;
+}
+
+/* =========================================================
+****************************Project*************************
+============================================================ */
+.project-slider .slide-img {
+	width:100%;
+	margin-right:0;
+}
+.project-slider .slide-content {
+	width:100%;
+	text-align:center;
+}
+.project-slider .slide-content ul {
+	text-align: left;
+}
+.project-slider .slide-content.centered p {
+	width:100%;
+}
+
+/* =========================================================
+**************************News Section**********************
+============================================================ */
+.sidebar {
+	margin-left:0px;
+	width:100%;
+	margin-top:80px;
+}
+.main-col {
+	width:100%;
+}
+
+.timeline-item .entry-body {
+	width:575px;
+}
+
+.news-page {
+	width:700px;
+}
+.about-author .author-content {
+	width:448px;
+}
+.comment-body {
+	width:486px;
+}
+#comments .comments-list .children .comment-body {
+	width:396px;
+}
+
+/* =========================================================
+***************************Tag line*************************
+============================================================ */
+#tag-line .tag-line-title,
+.flx-map-tagline h2 {
+	font-size:36px;
+}
+
+/* =========================================================
+*************************Testimonials***********************
+============================================================ */
+.flx-testimonial {
+	margin:0 -15px;
+}
+.flx-testimonial li {
+	margin:35px 15px;
+	width:335px;
+}
+.flx-testimonial li .testimonial-avatar {
+	margin-right:20px;
+}
+.flx-testimonial li .testimonial-content {
+	width:235px;
+}
+
+/* =========================================================
+**************************Contact*************************
+============================================================ */
+#contact-left {
+	margin:10px 20px 0 0;
+	width:320px;
+}
+#contact-right {
+	width:360px;
+}
+
+
+}
+
+
+@media only screen and (min-width: 640px) and (max-width: 767px) {
+
+body {
+	padding:0;
+}
+/* =========================================================
+***************************Columns**************************
+============================================================ */
+.wrapper {
+	width: 600px;
+}
+
+/* =========================================================
+*****************************Menu***************************
+============================================================ */
+
+#navigation #menu li a,
+.is-sticky #navigation.cbp-af-header-shrink #menu li a {
+	padding:10px 15px;
+}
+#navigation #menu {
+	display:none;
+}
+#navigation .wrapper-dropdown-3 {
+	display:block;
+	width:350px;
+}
+	
+#logo {
+	width:180px;
+}
+
+/* =========================================================
+****************************About***************************
+============================================================ */
+.flx-intro-box {
+	margin-bottom:40px;
+}
+#about-us .about-title {
+	font-size:30px;
+	line-height:36px;
+}
+.flx-intro-widget {
+	margin-bottom:20px;
+}
+
+/*-----------------Carousel------------------*/
+.flx-our-team-widget .our-team-thumb .mask {
+	width:49px;
+	height:49px;
+}
+.flx-our-team-widget .our-team-thumb .mask a {
+	margin-top:10px;
+	width:30px;
+	height:30px;
+	line-height:30px;
+	font-size:16px;
+}
+.flx-our-team-widget .our-team-thumb img {
+	width:55px;
+	height:55px;
+}
+
+.flx-our-team-widget .our-team-thumb {
+	margin-bottom:10px;
+}
+.flx-our-team-widget header .entry-title {
+	font-size:14px;
+}
+
+.right-col {
+	margin-left:10px;
+	width:330px;
+}
+.left-col {
+	margin-right:10px;
+}
+
+/* =========================================================
+*************************Our Services***********************
+============================================================ */
+#ourservices {
+	padding-bottom:55px;
+}
+
+.flx-service {
+	margin-left:-15px;
+}
+.flx-service li {
+	margin:30px 0 0 15px;
+	width:292px;
+}
+
+/* =========================================================
+****************************Static**************************
+============================================================ */
+#static {
+	padding-bottom:60px;
+}
+
+.flx-static li {
+	margin:0 0 0 25px;
+	width:100px;
+}
+.flx-static li p {
+	height:80px;
+}
+.flx-static li span.static-number {
+	width:80px;
+	margin-left:-40px;
+	top:40px;
+}
+.flx-static li:hover span.static-number {
+	transform: scale(1.5);
+	-moz-transform: scale(1.5);
+	-webkit-transform: scale(1.5);
+}
+.flx-static li span.static-number {
+	font-size:20px;
+}
+
+/* =========================================================
+**************************Logos client**********************
+============================================================ */
+#logo-clients ul li {
+	margin:0 0 0 20px;
+	width:83px;
+}
+
+/* =========================================================
+**************************Portfolio*************************
+============================================================ */
+.p-left-col {
+	width:230px;
+}
+.p-left-col ul {
+	display:block;
+}
+
+/* =========================================================
+****************************Project*************************
+============================================================ */
+.project-slider .slide-img {
+	width:100%;
+	margin-right:0;
+}
+.project-slider .slide-content {
+	width:100%;
+	text-align:center;
+}
+.project-slider .slide-content ul {
+	text-align: left;
+}
+.project-slider .slide-content.centered p {
+	width:100%;
+}
+.project-slider .flex-direction-nav a {
+	width:50px;
+	height:50px;
+}
+
+/* =========================================================
+**************************News Section**********************
+============================================================ */
+.sidebar {
+	margin-left:0px;
+	width:100%;
+	margin-top:80px;
+}
+.main-col {
+	width:100%;
+}
+
+.timeline-item .timeline-icon {
+	width:115px;
+}
+.timeline-item .entry-body {
+	width:485px;
+}
+
+.news-page {
+	width:600px;
+}
+.about-author .author-content {
+	width:348px;
+}
+.comment-body {
+	width:386px;
+}
+#comments .comments-list .children .comment-body {
+	width:296px;
+}
+
+/* =========================================================
+***************************Tag line*************************
+============================================================ */
+#tag-line .tag-line-title,
+.flx-map-tagline h2 {
+	font-size:30px;
+}
+
+/* =========================================================
+*************************Testimonials***********************
+============================================================ */
+.flx-testimonial {
+	margin:0 -15px;
+}
+.flx-testimonial li {
+	margin:35px 15px;
+	width:285px;
+}
+.flx-testimonial li .testimonial-avatar {
+	margin-right:20px;
+}
+.flx-testimonial li .testimonial-content {
+	width:185px;
+}
+
+/* =========================================================
+**************************Contact*************************
+============================================================ */
+#contact-left {
+	margin:10px 20px 0 0;
+	width:270px;
+}
+#contact-right {
+	width:310px;
+}
+
+
+}
+
+
+@media only screen and (min-width: 480px) and (max-width: 639px) {
+
+body {
+	padding:0;
+}
+/* =========================================================
+***************************Columns**************************
+============================================================ */
+.wrapper {
+	width: 440px;
+}
+
+/* =========================================================
+*****************************Menu***************************
+============================================================ */
+
+#navigation #menu li a,
+.is-sticky #navigation.cbp-af-header-shrink #menu li a {
+	padding:10px 15px;
+}
+#navigation #menu {
+	display:none;
+}
+#navigation .wrapper-dropdown-3 {
+	display:block;
+	width:200px;
+}
+	
+#logo {
+	width:180px;
+}
+
+/* =========================================================
+****************************About***************************
+============================================================ */
+.flx-intro-box {
+	margin-bottom:40px;
+}
+#about-us .about-title {
+	font-size:30px;
+	line-height:36px;
+}
+.flx-intro-widget {
+	margin-bottom:20px;
+}
+
+/*-----------------Carousel------------------*/
+.flx-our-team-widget .our-team-thumb .mask {
+	width:53px;
+	height:53px;
+}
+.flx-our-team-widget .our-team-thumb .mask a {
+	margin-top:12px;
+	width:30px;
+	height:30px;
+	line-height:30px;
+	font-size:16px;
+}
+.flx-our-team-widget .our-team-thumb img {
+	width:59px;
+	height:59px;
+}
+
+.flx-our-team-widget .our-team-thumb {
+	margin-bottom:10px;
+}
+.flx-our-team-widget header .entry-title {
+	font-size:14px;
+}
+
+.right-col {
+	margin-left:0px;
+	width:400px;
+	float:none;
+}
+.left-col {
+	margin-right:0px;
+	width:400px;
+	float:none;
+	margin-bottom:40px;
+}
+.left-col .social-link li {
+	width:41px;
+}
+
+/* =========================================================
+*************************Our Services***********************
+============================================================ */
+#ourservices {
+	padding-bottom:55px;
+}
+
+.flx-service {
+	margin-left:0;
+}
+.flx-service li {
+	margin:20px 0 0 0;
+	width:100%;
+}
+
+/* =========================================================
+****************************Static**************************
+============================================================ */
+#static {
+	padding-bottom:60px;
+}
+
+.flx-static {
+	margin:0 -10px;
+}
+.flx-static li {
+	margin:10px !important;
+	width:133px;
+}
+.flx-static li p {
+	height:113px;
+}
+.flx-static li span.static-number {
+	width:113px;
+	margin-left:-56px;
+	top:56px;
+}
+
+.flx-static li span.static-number {
+	font-size:20px;
+}
+
+/* =========================================================
+**************************Logos client**********************
+============================================================ */
+#logo-clients {
+	display:none;
+}
+#logo-clients ul li {
+	margin:0 0 0 20px;
+	width:83px;
+}
+
+/* =========================================================
+**************************Portfolio*************************
+============================================================ */
+.p-left-col {
+	width:370px;
+	margin-right:0;
+	float:none;
+}
+.p-right-col {
+	width:370px;
+	float:none;
+}
+.p-left-col ul {
+	display:block;
+}
+#options li a {
+	padding:7px 10px 8px;
+}
+
+/* =========================================================
+****************************Project*************************
+============================================================ */
+.project-slider .slide-img {
+	width:100%;
+	margin-right:0;
+}
+.project-slider .slide-content {
+	width:100%;
+	text-align:center;
+}
+.project-slider .slide-content ul {
+	text-align: left;
+}
+.project-slider .slide-content.centered p {
+	width:100%;
+}
+.project-slider .flex-direction-nav a {
+	width:50px;
+	height:50px;
+}
+
+/* =========================================================
+**************************News Section**********************
+============================================================ */
+.sidebar {
+	margin-left:0px;
+	width:100%;
+	margin-top:80px;
+}
+.main-col {
+	width:100%;
+}
+
+.timeline-item .timeline-icon {
+	width:115px;
+	display:none;
+}
+.timeline-item .entry-body {
+	width:100%;
+}
+#time-line {
+	display:none;
+}
+.timeline-item {
+	margin-bottom:40px;
+}
+.timeline-container .load-more {
+	left:50%;
+	margin-left:-27px;
+}
+
+.news-page {
+	width:400px;
+}
+.about-author .author-content {
+	width:198px;
+}
+.comment-body {
+	width:261px;
+	padding-left:10px;
+}
+#comments .comments-list .children .comment-body {
+	width:261px;
+	padding-left:10px;
+}
+.meta-box,
+.news-page .entry-box .entry-content {
+	padding:0 20px;
+}
+.meta-box .flx-post-type {
+	font-size:18px;
+	width:18px;
+	margin-top:12px;
+}
+.news-page .entry-title {
+	margin-bottom:10px;
+}
+.flx-tag-social .social-link li {
+	width:25px;
+}
+.flx-tag-social,
+.about-author,
+#comments {
+	margin:0 20px 30px;
+}
+.about-author .avatar-thumb,
+.comment-avatar {
+	margin-right:15px;
+}
+.comments-list,
+#comments .comments-list .children {
+	margin-left:0;
+}
+#respond {
+	margin:0 20px;
+}
+
+/* =========================================================
+***************************Tag line*************************
+============================================================ */
+#tag-line .tag-line-title,
+.flx-map-tagline h2 {
+	font-size:30px;
+}
+
+/* =========================================================
+*************************Testimonials***********************
+============================================================ */
+.flx-testimonial {
+	margin:0;
+}
+.flx-testimonial li {
+	margin:15px 0;
+	width:100%;
+}
+.flx-testimonial li .testimonial-avatar {
+	margin-right:20px;
+}
+.flx-testimonial li .testimonial-content {
+	width:340px;
+}
+.pagination ul > li > a, .pagination ul > li > span {
+	padding:10px 20px;
+}
+
+/* =========================================================
+**************************Contact*************************
+============================================================ */
+#contact-left {
+	margin:10px 0 20px 0;
+	width:100%;
+}
+#contact-right {
+	width:100%;
+}
+.flx-map-tagline {
+	width:100%;
+	left:0;
+	margin-left:0;
+}
+
+
+}
+
+
+
+@media only screen and (max-width: 479px) {
+
+body {
+	padding:0;
+}
+/* =========================================================
+***************************Columns**************************
+============================================================ */
+.wrapper {
+	width: 280px;
+}
+
+/* =========================================================
+*****************************Menu***************************
+============================================================ */
+
+#navigation #menu li a,
+.is-sticky #navigation.cbp-af-header-shrink #menu li a {
+	padding:10px 15px;
+}
+#navigation #menu {
+	display:none;
+}
+#navigation .wrapper-dropdown-3 {
+	display:block;
+	width:60px;
+	margin-right:10px;
+}
+.is-sticky #navigation.cbp-af-header-shrink .wrapper-dropdown-3 {
+	width:100px;
+}
+#navigation .wrapper-dropdown-3 .dropdown {
+	width:150px;
+	left:-70px;
+}
+.is-sticky #navigation.cbp-af-header-shrink .wrapper-dropdown-3 .dropdown {
+	left:-30px;
+}
+	
+#logo {
+	width:120px;
+	margin-left:10px;
+}
+
+/* =========================================================
+****************************About***************************
+============================================================ */
+.flx-intro-box {
+	margin-bottom:40px;
+}
+#about-us .about-title {
+	font-size:24px;
+	line-height:30px;
+}
+.flx-intro-widget {
+	margin-bottom:20px;
+}
+
+/*-----------------Carousel------------------*/
+.flx-our-team-widget .list-carousel.responsive {
+	margin:0 -10px;
+}
+.flx-our-team-widget .list-carousel ul li {
+	margin:0 10px;
+}
+.flx-our-team-widget .our-team-thumb .mask {
+	width:93px;
+	height:93px;
+}
+.flx-our-team-widget .our-team-thumb .mask a {
+	margin-top:26px;
+	width:40px;
+	height:40px;
+	line-height:40px;
+	font-size:16px;
+}
+.flx-our-team-widget .our-team-thumb img {
+	width:99px;
+	height:99px;
+}
+
+.flx-our-team-widget .our-team-thumb {
+	margin-bottom:10px;
+}
+.flx-our-team-widget header .entry-title {
+	font-size:14px;
+}
+
+.right-col {
+	margin-left:0px;
+	width:275px;
+	float:none;
+}
+.left-col {
+	margin-right:0px;
+	width:275px;
+	float:none;
+	margin-bottom:40px;
+}
+.left-col .social-link li {
+	width:41px;
+}
+
+/* =========================================================
+*************************Our Services***********************
+============================================================ */
+#ourservices {
+	padding-bottom:55px;
+}
+
+.flx-service {
+	margin-left:0;
+}
+.flx-service li {
+	margin:20px 0 0 0;
+	width:100%;
+}
+
+.section-title .big-caption {
+	font-size:38px;
+}
+.small-btn {
+	padding:0 25px;
+}
+/* =========================================================
+****************************Static**************************
+============================================================ */
+#static {
+	padding-bottom:60px;
+}
+
+.flx-static {
+	margin:0 -10px;
+}
+.flx-static li {
+	margin:10px !important;
+	width:130px;
+}
+.flx-static li p {
+	height:113px;
+}
+.flx-static li span.static-number {
+	width:113px;
+	margin-left:-56px;
+	top:56px;
+}
+
+.flx-static li span.static-number {
+	font-size:20px;
+}
+
+/* =========================================================
+**************************Logos client**********************
+============================================================ */
+#logo-clients {
+	display:none;
+}
+#logo-clients ul li {
+	margin:0 0 0 20px;
+	width:83px;
+}
+
+/* =========================================================
+**************************Portfolio*************************
+============================================================ */
+.p-left-col {
+	width:245px;
+	margin-right:0;
+	float:none;
+}
+.p-right-col,
+.sticky-col {
+	width:245px;
+	float:none;
+}
+.p-left-col ul {
+	display:block;
+}
+#options li a {
+	padding:7px 10px 8px;
+}
+
+.p-right-col .social-link li {
+	width:40px;
+}
+
+/* =========================================================
+****************************Project*************************
+============================================================ */
+.project-slider .slide-img {
+	width:100%;
+	margin-right:0;
+}
+.project-slider .slide-content {
+	width:100%;
+	text-align:center;
+}
+.project-slider .slide-content ul {
+	text-align: left;
+}
+.project-slider .slide-content.centered p {
+	width:100%;
+}
+.project-slider .flex-direction-nav a {
+	width:50px;
+	height:50px;
+}
+
+/* =========================================================
+**************************News Section**********************
+============================================================ */
+.sidebar {
+	margin-left:0px;
+	width:100%;
+	margin-top:80px;
+}
+.main-col {
+	width:100%;
+}
+
+.timeline-item .timeline-icon {
+	width:115px;
+	display:none;
+}
+.timeline-item .entry-body {
+	width:100%;
+}
+#time-line {
+	display:none;
+}
+.timeline-item {
+	margin-bottom:40px;
+}
+.timeline-container .load-more {
+	left:50%;
+	margin-left:-27px;
+}
+
+.news-page {
+	width:300px;
+}
+.about-author .author-content {
+	width:155px;
+}
+.comment-body {
+	width:181px;
+	padding-left:10px;
+}
+#comments .comments-list .children .comment-body {
+	width:181px;
+	padding-left:10px;
+}
+.meta-box,
+.news-page .entry-box .entry-content {
+	padding:0 20px;
+}
+.meta-box .flx-post-type {
+	font-size:18px;
+	width:18px;
+	margin-top:12px;
+	display:none;
+}
+.news-page .entry-title {
+	margin-bottom:10px;
+}
+.flx-tag-social .social-link li {
+	width:25px;
+}
+.flx-tag-social,
+.about-author,
+#comments {
+	margin:0 20px 30px;
+}
+.about-author .avatar-thumb,
+.comment-avatar {
+	margin-right:15px;
+	width:50px;
+}
+.comments-list,
+#comments .comments-list .children {
+	margin-left:0;
+}
+#respond {
+	margin:0 20px;
+}
+
+.timeline-item .entry-body .entry-thumb {
+	margin-right:0;
+	margin-bottom:20px;
+	width:100%;
+}
+.timeline-item .entry-author, .timeline-item .entry-date, .timeline-item .entry-comment, .timeline-item .entry-categories {
+	margin-right:10px;
+}
+
+.entry-meta-box a span, .entry-meta-box .entry-date span {
+	display:none;
+}
+
+/* =========================================================
+***************************Tag line*************************
+============================================================ */
+#tag-line .tag-line-title,
+.flx-map-tagline h2 {
+	font-size:22px;
+	line-height:24px;
+}
+.entry-meta-box .entry-date, .entry-meta-box a {
+	padding:5px;
+}
+.news-page .entry-box footer .prev-post,
+.news-page .entry-box footer .next-post {
+	width:50%;
+}
+
+.flx-tag-social .tag-box {
+	width:215px;
+	margin-bottom:10px;
+}
+
+/* =========================================================
+*************************Testimonials***********************
+============================================================ */
+.flx-testimonial {
+	margin:0;
+}
+.flx-testimonial li {
+	margin:15px 0;
+	width:100%;
+}
+.flx-testimonial li .testimonial-avatar {
+	margin-right:20px;
+}
+.flx-testimonial li .testimonial-content {
+	width:180px;
+}
+.pagination ul > li > a, .pagination ul > li > span {
+	padding:5px 10px;
+}
+
+/* =========================================================
+**************************Contact*************************
+============================================================ */
+#contact-left {
+	margin:10px 0 20px 0;
+	width:100%;
+}
+#contact-right {
+	width:100%;
+}
+.flx-map-tagline {
+	width:100%;
+	left:0;
+	margin-left:0;
+}
+
+#page-footer .social-link li {
+	margin:0 0 0 5px;
+}
+#page-footer .social-link li a {
+	width:25px;
+	height:25px;
+	line-height:25px;
+}
+
+
+}

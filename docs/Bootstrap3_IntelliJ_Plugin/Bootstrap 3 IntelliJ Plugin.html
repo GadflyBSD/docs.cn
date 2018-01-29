@@ -1,0 +1,3315 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+<title>README</title>
+
+
+<style type="text/css">
+body {
+  font-family: Helvetica, arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: white;
+  padding: 30px; }
+
+body > *:first-child {
+  margin-top: 0 !important; }
+body > *:last-child {
+  margin-bottom: 0 !important; }
+
+a {
+  color: #4183C4; }
+a.absent {
+  color: #cc0000; }
+a.anchor {
+  display: block;
+  padding-left: 30px;
+  margin-left: -30px;
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0; }
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 20px 0 10px;
+  padding: 0;
+  font-weight: bold;
+  -webkit-font-smoothing: antialiased;
+  cursor: text;
+  position: relative; }
+
+h1:hover a.anchor, h2:hover a.anchor, h3:hover a.anchor, h4:hover a.anchor, h5:hover a.anchor, h6:hover a.anchor {
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA09pVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoMTMuMCAyMDEyMDMwNS5tLjQxNSAyMDEyLzAzLzA1OjIxOjAwOjAwKSAgKE1hY2ludG9zaCkiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6OUM2NjlDQjI4ODBGMTFFMTg1ODlEODNERDJBRjUwQTQiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6OUM2NjlDQjM4ODBGMTFFMTg1ODlEODNERDJBRjUwQTQiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo5QzY2OUNCMDg4MEYxMUUxODU4OUQ4M0REMkFGNTBBNCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo5QzY2OUNCMTg4MEYxMUUxODU4OUQ4M0REMkFGNTBBNCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PsQhXeAAAABfSURBVHjaYvz//z8DJYCRUgMYQAbAMBQIAvEqkBQWXI6sHqwHiwG70TTBxGaiWwjCTGgOUgJiF1J8wMRAIUA34B4Q76HUBelAfJYSA0CuMIEaRP8wGIkGMA54bgQIMACAmkXJi0hKJQAAAABJRU5ErkJggg==) no-repeat 10px center;
+  text-decoration: none; }
+
+h1 tt, h1 code {
+  font-size: inherit; }
+
+h2 tt, h2 code {
+  font-size: inherit; }
+
+h3 tt, h3 code {
+  font-size: inherit; }
+
+h4 tt, h4 code {
+  font-size: inherit; }
+
+h5 tt, h5 code {
+  font-size: inherit; }
+
+h6 tt, h6 code {
+  font-size: inherit; }
+
+h1 {
+  font-size: 28px;
+  color: black; }
+
+h2 {
+  font-size: 24px;
+  border-bottom: 1px solid #cccccc;
+  color: black; }
+
+h3 {
+  font-size: 18px; }
+
+h4 {
+  font-size: 16px; }
+
+h5 {
+  font-size: 14px; }
+
+h6 {
+  color: #777777;
+  font-size: 14px; }
+
+p, blockquote, ul, ol, dl, li, table, pre {
+  margin: 15px 0; }
+
+hr {
+  background: transparent url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAECAYAAACtBE5DAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNSBNYWNpbnRvc2giIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6OENDRjNBN0E2NTZBMTFFMEI3QjRBODM4NzJDMjlGNDgiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6OENDRjNBN0I2NTZBMTFFMEI3QjRBODM4NzJDMjlGNDgiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo4Q0NGM0E3ODY1NkExMUUwQjdCNEE4Mzg3MkMyOUY0OCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo4Q0NGM0E3OTY1NkExMUUwQjdCNEE4Mzg3MkMyOUY0OCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PqqezsUAAAAfSURBVHjaYmRABcYwBiM2QSA4y4hNEKYDQxAEAAIMAHNGAzhkPOlYAAAAAElFTkSuQmCC) repeat-x 0 0;
+  border: 0 none;
+  color: #cccccc;
+  height: 4px;
+  padding: 0;
+}
+
+body > h2:first-child {
+  margin-top: 0;
+  padding-top: 0; }
+body > h1:first-child {
+  margin-top: 0;
+  padding-top: 0; }
+  body > h1:first-child + h2 {
+    margin-top: 0;
+    padding-top: 0; }
+body > h3:first-child, body > h4:first-child, body > h5:first-child, body > h6:first-child {
+  margin-top: 0;
+  padding-top: 0; }
+
+a:first-child h1, a:first-child h2, a:first-child h3, a:first-child h4, a:first-child h5, a:first-child h6 {
+  margin-top: 0;
+  padding-top: 0; }
+
+h1 p, h2 p, h3 p, h4 p, h5 p, h6 p {
+  margin-top: 0; }
+
+li p.first {
+  display: inline-block; }
+li {
+  margin: 0; }
+ul, ol {
+  padding-left: 30px; }
+
+ul :first-child, ol :first-child {
+  margin-top: 0; }
+
+dl {
+  padding: 0; }
+  dl dt {
+    font-size: 14px;
+    font-weight: bold;
+    font-style: italic;
+    padding: 0;
+    margin: 15px 0 5px; }
+    dl dt:first-child {
+      padding: 0; }
+    dl dt > :first-child {
+      margin-top: 0; }
+    dl dt > :last-child {
+      margin-bottom: 0; }
+  dl dd {
+    margin: 0 0 15px;
+    padding: 0 15px; }
+    dl dd > :first-child {
+      margin-top: 0; }
+    dl dd > :last-child {
+      margin-bottom: 0; }
+
+blockquote {
+  border-left: 4px solid #dddddd;
+  padding: 0 15px;
+  color: #777777; }
+  blockquote > :first-child {
+    margin-top: 0; }
+  blockquote > :last-child {
+    margin-bottom: 0; }
+
+table {
+  padding: 0;border-collapse: collapse; }
+  table tr {
+    border-top: 1px solid #cccccc;
+    background-color: white;
+    margin: 0;
+    padding: 0; }
+    table tr:nth-child(2n) {
+      background-color: #f8f8f8; }
+    table tr th {
+      font-weight: bold;
+      border: 1px solid #cccccc;
+      margin: 0;
+      padding: 6px 13px; }
+    table tr td {
+      border: 1px solid #cccccc;
+      margin: 0;
+      padding: 6px 13px; }
+    table tr th :first-child, table tr td :first-child {
+      margin-top: 0; }
+    table tr th :last-child, table tr td :last-child {
+      margin-bottom: 0; }
+
+img {
+  max-width: 100%; }
+
+span.frame {
+  display: block;
+  overflow: hidden; }
+  span.frame > span {
+    border: 1px solid #dddddd;
+    display: block;
+    float: left;
+    overflow: hidden;
+    margin: 13px 0 0;
+    padding: 7px;
+    width: auto; }
+  span.frame span img {
+    display: block;
+    float: left; }
+  span.frame span span {
+    clear: both;
+    color: #333333;
+    display: block;
+    padding: 5px 0 0; }
+span.align-center {
+  display: block;
+  overflow: hidden;
+  clear: both; }
+  span.align-center > span {
+    display: block;
+    overflow: hidden;
+    margin: 13px auto 0;
+    text-align: center; }
+  span.align-center span img {
+    margin: 0 auto;
+    text-align: center; }
+span.align-right {
+  display: block;
+  overflow: hidden;
+  clear: both; }
+  span.align-right > span {
+    display: block;
+    overflow: hidden;
+    margin: 13px 0 0;
+    text-align: right; }
+  span.align-right span img {
+    margin: 0;
+    text-align: right; }
+span.float-left {
+  display: block;
+  margin-right: 13px;
+  overflow: hidden;
+  float: left; }
+  span.float-left span {
+    margin: 13px 0 0; }
+span.float-right {
+  display: block;
+  margin-left: 13px;
+  overflow: hidden;
+  float: right; }
+  span.float-right > span {
+    display: block;
+    overflow: hidden;
+    margin: 13px auto 0;
+    text-align: right; }
+
+code, tt {
+  margin: 0 2px;
+  padding: 0 5px;
+  white-space: nowrap;
+  border: 1px solid #eaeaea;
+  background-color: #f8f8f8;
+  border-radius: 3px; }
+
+pre code {
+  margin: 0;
+  padding: 0;
+  white-space: pre;
+  border: none;
+  background: transparent; }
+
+.highlight pre {
+  background-color: #f8f8f8;
+  border: 1px solid #cccccc;
+  font-size: 13px;
+  line-height: 19px;
+  overflow: auto;
+  padding: 6px 10px;
+  border-radius: 3px; }
+
+pre {
+  background-color: #f8f8f8;
+  border: 1px solid #cccccc;
+  font-size: 13px;
+  line-height: 19px;
+  overflow: auto;
+  padding: 6px 10px;
+  border-radius: 3px; }
+  pre code, pre tt {
+    background-color: transparent;
+    border: none; }
+
+sup {
+    font-size: 0.83em;
+    vertical-align: super;
+    line-height: 0;
+}
+
+kbd {
+  display: inline-block;
+  padding: 3px 5px;
+  font-size: 11px;
+  line-height: 10px;
+  color: #555;
+  vertical-align: middle;
+  background-color: #fcfcfc;
+  border: solid 1px #ccc;
+  border-bottom-color: #bbb;
+  border-radius: 3px;
+  box-shadow: inset 0 -1px 0 #bbb
+}
+
+* {
+	-webkit-print-color-adjust: exact;
+}
+@media screen and (min-width: 914px) {
+    body {
+        width: 854px;
+        margin:0 auto;
+    }
+}
+@media print {
+	table, pre {
+		page-break-inside: avoid;
+	}
+	pre {
+		word-wrap: break-word;
+	}
+}
+</style>
+
+
+</head>
+
+<body>
+
+<h1 id="toc_0">Bootstrap 3 IntelliJ Plugin</h1>
+
+<h2 id="toc_1">What&#39;s included - contents</h2>
+
+<ul>
+<li><a href="#alert">Alert</a></li>
+<li><a href="#alert-link">Alert-link</a></li>
+<li><a href="#alert">Alert</a></li>
+<li><a href="#badge">Badge</a></li>
+<li><a href="#breadcrumbs">Breadcrumbs</a></li>
+<li><a href="#button-group">Button-group</a></li>
+<li><a href="#button-toolbar">Button-toolbar</a></li>
+<li><a href="#button">Button</a></li>
+<li><a href="#cdn">Cdn</a></li>
+<li><a href="#checkbox">Checkbox</a></li>
+<li><a href="#clearfix">Clearfix</a></li>
+<li><a href="#col">Col</a></li>
+<li><a href="#container">Container</a></li>
+<li><a href="#dismissable-alert">Dismissable-alert</a></li>
+<li><a href="#feature">Feature</a></li>
+<li><a href="#form">Form</a></li>
+<li><a href="#form-field">Form-field</a></li>
+<li><a href="#form">Form</a></li>
+<li><a href="#icon">Icon</a></li>
+<li><a href="#image">Image</a></li>
+<li><a href="#input">Input</a></li>
+<li><a href="#jumbotron">Jumbotron</a></li>
+<li><a href="#label">Label</a></li>
+<li><a href="#list-group">List-group</a></li>
+<li><a href="#media-object">Media-object</a></li>
+<li><a href="#modal">Modal</a></li>
+<li><a href="#navbar">Navbar</a></li>
+<li><a href="#page-header">Page-header</a></li>
+<li><a href="#pager">Pager</a></li>
+<li><a href="#pagination">Pagination</a></li>
+<li><a href="#panel">Panel</a></li>
+<li><a href="#pills">Pills</a></li>
+<li><a href="#progress-bar">Progress-bar</a></li>
+<li><a href="#radio">Radio</a></li>
+<li><a href="#responsive-embed">Responsive-embed</a></li>
+<li><a href="#row">Row</a></li>
+<li><a href="#select">Select</a></li>
+<li><a href="#submit">Submit</a></li>
+<li><a href="#table">Table</a></li>
+<li><a href="#tabs">Tabs</a></li>
+<li><a href="#template">Template</a></li>
+<li><a href="#thumbnail">Thumbnail</a></li>
+<li><a href="#well">Well</a></li>
+</ul>
+
+<h3 id="toc_2">Alert</h3>
+
+<table>
+<thead>
+<tr>
+<th>Component</th>
+<th>Snippet code</th>
+<th>Context</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>Alert</td>
+<td>bs3-alert</td>
+<td>HTML</td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="toc_3">Alert-link</h3>
+
+<table>
+<thead>
+<tr>
+<th>Component</th>
+<th>Snippet code</th>
+<th>Context</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>Alert with alert link (warning)</td>
+<td>bs3-alert-link</td>
+<td>HTML</td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="toc_4">Alert</h3>
+
+<table>
+<thead>
+<tr>
+<th>Component</th>
+<th>Snippet code</th>
+<th>Context</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>Alert (Danger)</td>
+<td>bs3-alert:danger</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Alert (Info)</td>
+<td>bs3-alert:info</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Alert (Success)</td>
+<td>bs3-alert:success</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Alert (Warning)</td>
+<td>bs3-alert:warning</td>
+<td>HTML</td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="toc_5">Badge</h3>
+
+<table>
+<thead>
+<tr>
+<th>Component</th>
+<th>Snippet code</th>
+<th>Context</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>Badge</td>
+<td>bs3-badge</td>
+<td>HTML</td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="toc_6">Breadcrumbs</h3>
+
+<table>
+<thead>
+<tr>
+<th>Component</th>
+<th>Snippet code</th>
+<th>Context</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>Breadcrumbs</td>
+<td>bs3-breadcrumbs</td>
+<td>HTML</td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="toc_7">Button-group</h3>
+
+<table>
+<thead>
+<tr>
+<th>Component</th>
+<th>Snippet code</th>
+<th>Context</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>Button group</td>
+<td>bs3-button-group</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Button group (Vertical orientation)</td>
+<td>bs3-button-group:vertical</td>
+<td>HTML</td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="toc_8">Button-toolbar</h3>
+
+<table>
+<thead>
+<tr>
+<th>Component</th>
+<th>Snippet code</th>
+<th>Context</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>Button toolbar</td>
+<td>bs3-button-toolbar</td>
+<td>HTML</td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="toc_9">Button</h3>
+
+<table>
+<thead>
+<tr>
+<th>Component</th>
+<th>Snippet code</th>
+<th>Context</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>Full dropdown example</td>
+<td>bs3-button:dropdown</td>
+<td>HTML</td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="toc_10">Cdn</h3>
+
+<table>
+<thead>
+<tr>
+<th>Component</th>
+<th>Snippet code</th>
+<th>Context</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>Bootstrap 3 CSS &amp; JS CDN</td>
+<td>bs3-cdn</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Bootstrap 3 CSS CDN</td>
+<td>bs3-cdn:css</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Bootstrap 3 JavaScript CDN</td>
+<td>bs3-cdn:js</td>
+<td>HTML</td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="toc_11">Checkbox</h3>
+
+<table>
+<thead>
+<tr>
+<th>Component</th>
+<th>Snippet code</th>
+<th>Context</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>Checkbox Input Field</td>
+<td>bs3-checkbox</td>
+<td>HTML</td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="toc_12">Clearfix</h3>
+
+<table>
+<thead>
+<tr>
+<th>Component</th>
+<th>Snippet code</th>
+<th>Context</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>Clearfix</td>
+<td>bs3-clearfix</td>
+<td>HTML</td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="toc_13">Col</h3>
+
+<table>
+<thead>
+<tr>
+<th>Component</th>
+<th>Snippet code</th>
+<th>Context</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>Column 1</td>
+<td>bs3-col:1</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Column 10</td>
+<td>bs3-col:10</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Column 11</td>
+<td>bs3-col:11</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Column 12</td>
+<td>bs3-col:12</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Column 2</td>
+<td>bs3-col:2</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Column 3</td>
+<td>bs3-col:3</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Column 4</td>
+<td>bs3-col:4</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Column 5</td>
+<td>bs3-col:5</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Column 6</td>
+<td>bs3-col:6</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Column 7</td>
+<td>bs3-col:7</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Column 8</td>
+<td>bs3-col:8</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Column 9</td>
+<td>bs3-col:9</td>
+<td>HTML</td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="toc_14">Container</h3>
+
+<table>
+<thead>
+<tr>
+<th>Component</th>
+<th>Snippet code</th>
+<th>Context</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>Container</td>
+<td>bs3-container</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Container Fluid</td>
+<td>bs3-container:fluid</td>
+<td>HTML</td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="toc_15">Dismissable-alert</h3>
+
+<table>
+<thead>
+<tr>
+<th>Component</th>
+<th>Snippet code</th>
+<th>Context</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>Dismissable alert (danger)</td>
+<td>bs3-dismissable-alert:danger</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Dismissable alert (info)</td>
+<td>bs3-dismissable-alert:info</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Dismissable alert (success)</td>
+<td>bs3-dismissable-alert:success</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Dismissable alert (warning)</td>
+<td>bs3-dismissable-alert:warning</td>
+<td>HTML</td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="toc_16">Feature</h3>
+
+<table>
+<thead>
+<tr>
+<th>Component</th>
+<th>Snippet code</th>
+<th>Context</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>Carousel Rows</td>
+<td>bs3-feature:carousel-rows</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Carousel Rows</td>
+<td>bs3-feature:carousel-rows-css</td>
+<td>CSS</td>
+</tr>
+<tr>
+<td>Beautiful image card with description</td>
+<td>bs3-feature:image-card-with-description</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Beautiful image card with description</td>
+<td>bs3-feature:image-card-with-description-css</td>
+<td>CSS</td>
+</tr>
+<tr>
+<td>Thumbnail in gallery</td>
+<td>bs3-feature:thumbnail</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Thumbnail gallery</td>
+<td>bs3-feature:thumbnail-gallery</td>
+<td>HTML</td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="toc_17">Form</h3>
+
+<table>
+<thead>
+<tr>
+<th>Component</th>
+<th>Snippet code</th>
+<th>Context</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>Form</td>
+<td>bs3-form</td>
+<td>HTML</td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="toc_18">Form-field</h3>
+
+<table>
+<thead>
+<tr>
+<th>Component</th>
+<th>Snippet code</th>
+<th>Context</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>No description</td>
+<td>bs3-form-field:button</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>No description</td>
+<td>bs3-form-field:checkbox</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>No description</td>
+<td>bs3-form-field:text</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>No description</td>
+<td>bs3-form-field:time</td>
+<td>HTML</td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="toc_19">Form</h3>
+
+<table>
+<thead>
+<tr>
+<th>Component</th>
+<th>Snippet code</th>
+<th>Context</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>Form (Horizontal)</td>
+<td>bs3-form:horizontal</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Form (Inline)</td>
+<td>bs3-form:inline</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Form (Label)</td>
+<td>bs3-form:label</td>
+<td>HTML</td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="toc_20">Icon</h3>
+
+<table>
+<thead>
+<tr>
+<th>Component</th>
+<th>Snippet code</th>
+<th>Context</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>Font Awesome Icon</td>
+<td>bs3-icon</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Glyphicon</td>
+<td>bs3-icon:glyphicon</td>
+<td>HTML</td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="toc_21">Image</h3>
+
+<table>
+<thead>
+<tr>
+<th>Component</th>
+<th>Snippet code</th>
+<th>Context</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>Image</td>
+<td>bs3-image</td>
+<td>HTML</td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="toc_22">Input</h3>
+
+<table>
+<thead>
+<tr>
+<th>Component</th>
+<th>Snippet code</th>
+<th>Context</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>Input (Form Input)</td>
+<td>bs3-input</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Horizontal Form Input Field</td>
+<td>bs3-input:h</td>
+<td>HTML</td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="toc_23">Jumbotron</h3>
+
+<table>
+<thead>
+<tr>
+<th>Component</th>
+<th>Snippet code</th>
+<th>Context</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>Jumbotron</td>
+<td>bs3-jumbotron</td>
+<td>HTML</td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="toc_24">Label</h3>
+
+<table>
+<thead>
+<tr>
+<th>Component</th>
+<th>Snippet code</th>
+<th>Context</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>Label</td>
+<td>bs3-label</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Label (Danger)</td>
+<td>bs3-label:danger</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Label (Default)</td>
+<td>bs3-label:default</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Label (Info)</td>
+<td>bs3-label:info</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Label (Success)</td>
+<td>bs3-label:success</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Label (Warning)</td>
+<td>bs3-label:warning</td>
+<td>HTML</td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="toc_25">List-group</h3>
+
+<table>
+<thead>
+<tr>
+<th>Component</th>
+<th>Snippet code</th>
+<th>Context</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>List group</td>
+<td>bs3-list-group</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>List group with Badges</td>
+<td>bs3-list-group:badges</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>List Group with Content</td>
+<td>bs3-list-group:content</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Linked List Group</td>
+<td>bs3-list-group:linked</td>
+<td>HTML</td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="toc_26">Media-object</h3>
+
+<table>
+<thead>
+<tr>
+<th>Component</th>
+<th>Snippet code</th>
+<th>Context</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>Media object (single entry)</td>
+<td>bs3-media-object</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Example media object</td>
+<td>bs3-media-object:example</td>
+<td>HTML</td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="toc_27">Modal</h3>
+
+<table>
+<thead>
+<tr>
+<th>Component</th>
+<th>Snippet code</th>
+<th>Context</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>Modal Dialog Box</td>
+<td>bs3-modal</td>
+<td>HTML</td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="toc_28">Navbar</h3>
+
+<table>
+<thead>
+<tr>
+<th>Component</th>
+<th>Snippet code</th>
+<th>Context</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>Navbar</td>
+<td>bs3-navbar</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Navbar (Basic)</td>
+<td>bs3-navbar:basic</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Navbar (Brand)</td>
+<td>bs3-navbar:brand</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Navbar (Fixed Bottom)</td>
+<td>bs3-navbar:fixed-bottom</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Navbar (Fixed Top)</td>
+<td>bs3-navbar:fixed-top</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Navbar (Form)</td>
+<td>bs3-navbar:form</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Navbar (Inverse)</td>
+<td>bs3-navbar:inverse</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Navbar (Link)</td>
+<td>bs3-navbar:link</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Navbar (Links)</td>
+<td>bs3-navbar:links</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Navbar (Responsive)</td>
+<td>bs3-navbar:responsive</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Navbar (Static Top)</td>
+<td>bs3-navbar:static-top</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Navbar (Text)</td>
+<td>bs3-navbar:text</td>
+<td>HTML</td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="toc_29">Page-header</h3>
+
+<table>
+<thead>
+<tr>
+<th>Component</th>
+<th>Snippet code</th>
+<th>Context</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>Page Header</td>
+<td>bs3-page-header</td>
+<td>HTML</td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="toc_30">Pager</h3>
+
+<table>
+<thead>
+<tr>
+<th>Component</th>
+<th>Snippet code</th>
+<th>Context</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>Pager</td>
+<td>bs3-pager</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Pager (Aligned)</td>
+<td>bs3-pager:aligned</td>
+<td>HTML</td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="toc_31">Pagination</h3>
+
+<table>
+<thead>
+<tr>
+<th>Component</th>
+<th>Snippet code</th>
+<th>Context</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>Pagination</td>
+<td>bs3-pagination</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Pagination (Large)</td>
+<td>bs3-pagination:large</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Pagination (Small)</td>
+<td>bs3-pagination:small</td>
+<td>HTML</td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="toc_32">Panel</h3>
+
+<table>
+<thead>
+<tr>
+<th>Component</th>
+<th>Snippet code</th>
+<th>Context</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>Panel</td>
+<td>bs3-panel</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Panel (Danger)</td>
+<td>bs3-panel:danger</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Panel with footer</td>
+<td>bs3-panel:footer</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Panel with heading</td>
+<td>bs3-panel:heading</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Panel (Info)</td>
+<td>bs3-panel:info</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Panel (Primary)</td>
+<td>bs3-panel:primary</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Panel (Success)</td>
+<td>bs3-panel:success</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Panel with table</td>
+<td>bs3-panel:table</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Panel (Warning)</td>
+<td>bs3-panel:warning</td>
+<td>HTML</td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="toc_33">Pills</h3>
+
+<table>
+<thead>
+<tr>
+<th>Component</th>
+<th>Snippet code</th>
+<th>Context</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>Pills</td>
+<td>bs3-pills</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Pills (With dropdown menu)</td>
+<td>bs3-pills:dropdown</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Pills (Justified)</td>
+<td>bs3-pills:justified</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Pills (Vertical)</td>
+<td>bs3-pills:vertical</td>
+<td>HTML</td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="toc_34">Progress-bar</h3>
+
+<table>
+<thead>
+<tr>
+<th>Component</th>
+<th>Snippet code</th>
+<th>Context</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>Basic progress bar</td>
+<td>bs3-progress-bar</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Progress bar (danger)</td>
+<td>bs3-progress-bar:danger</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Progress bar (info)</td>
+<td>bs3-progress-bar:info</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Progress bar with label</td>
+<td>bs3-progress-bar:label</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Stacked progress bar</td>
+<td>bs3-progress-bar:stacked</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Striped progress bar</td>
+<td>bs3-progress-bar:striped</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Animated striped progress bar</td>
+<td>bs3-progress-bar:striped-animated</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Progress bar (success)</td>
+<td>bs3-progress-bar:success</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Progress bar (warning)</td>
+<td>bs3-progress-bar:warning</td>
+<td>HTML</td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="toc_35">Radio</h3>
+
+<table>
+<thead>
+<tr>
+<th>Component</th>
+<th>Snippet code</th>
+<th>Context</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>Radio Form Field</td>
+<td>bs3-radio</td>
+<td>HTML</td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="toc_36">Responsive-embed</h3>
+
+<table>
+<thead>
+<tr>
+<th>Component</th>
+<th>Snippet code</th>
+<th>Context</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>Responsive embed of video (16:9)</td>
+<td>bs3-responsive-embed:16:9</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Responsive embed of video (4:3)</td>
+<td>bs3-responsive-embed:4:3</td>
+<td>HTML</td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="toc_37">Row</h3>
+
+<table>
+<thead>
+<tr>
+<th>Component</th>
+<th>Snippet code</th>
+<th>Context</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>Row</td>
+<td>bs3-row</td>
+<td>HTML</td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="toc_38">Select</h3>
+
+<table>
+<thead>
+<tr>
+<th>Component</th>
+<th>Snippet code</th>
+<th>Context</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>Select Box Form Field</td>
+<td>bs3-select</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Horizontal Form Select Box Field</td>
+<td>bs3-select:h</td>
+<td>HTML</td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="toc_39">Submit</h3>
+
+<table>
+<thead>
+<tr>
+<th>Component</th>
+<th>Snippet code</th>
+<th>Context</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>Submit Button for Form</td>
+<td>bs3-submit</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Submit Button for Horizontal Forms</td>
+<td>bs3-submit:h</td>
+<td>HTML</td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="toc_40">Table</h3>
+
+<table>
+<thead>
+<tr>
+<th>Component</th>
+<th>Snippet code</th>
+<th>Context</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>Table</td>
+<td>bs3-table</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Table (Bordered)</td>
+<td>bs3-table:bordered</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Table (Condensed)</td>
+<td>bs3-table:condensed</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Table (Hover)</td>
+<td>bs3-table:hover</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Table (Responsive)</td>
+<td>bs3-table:responsive</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Table (Striped)</td>
+<td>bs3-table:striped</td>
+<td>HTML</td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="toc_41">Tabs</h3>
+
+<table>
+<thead>
+<tr>
+<th>Component</th>
+<th>Snippet code</th>
+<th>Context</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>Tabs</td>
+<td>bs3-tabs</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Tabs (With dropdown menu)</td>
+<td>bs3-tabs:dropdown</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Tabs (Justified)</td>
+<td>bs3-tabs:justified</td>
+<td>HTML</td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="toc_42">Template</h3>
+
+<table>
+<thead>
+<tr>
+<th>Component</th>
+<th>Snippet code</th>
+<th>Context</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>Bootstrap 3 HTML5 Template</td>
+<td>bs3-template:html5</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Bootstrap 3 Starter Template</td>
+<td>bs3-template:starter</td>
+<td>HTML</td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="toc_43">Thumbnail</h3>
+
+<table>
+<thead>
+<tr>
+<th>Component</th>
+<th>Snippet code</th>
+<th>Context</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>Thumbnail</td>
+<td>bs3-thumbnail</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Thumbnail with content</td>
+<td>bs3-thumbnail:content</td>
+<td>HTML</td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="toc_44">Well</h3>
+
+<table>
+<thead>
+<tr>
+<th>Component</th>
+<th>Snippet code</th>
+<th>Context</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>Well</td>
+<td>bs3-well</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Well (large)</td>
+<td>bs3-well:large</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Well (small)</td>
+<td>bs3-well:small</td>
+<td>HTML</td>
+</tr>
+</tbody>
+</table>
+
+<h2 id="toc_45">Font Awesome</h2>
+
+<p>This list has been contributed by <a href="https://github.com/pixsrv">pixsrv</a></p>
+
+<table>
+<thead>
+<tr>
+<th>Component</th>
+<th>Snippet code</th>
+<th>Context</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>Adjust icon</td>
+<td>fa-adjust</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Anchor icon</td>
+<td>fa-anchor</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Archive icon</td>
+<td>fa-archive</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Area-chart icon</td>
+<td>fa-area-chart</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Arrows icon</td>
+<td>fa-arrows</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Arrows-h icon</td>
+<td>fa-arrows-h</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Arrows-v icon</td>
+<td>fa-arrows-v</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Asterisk icon</td>
+<td>fa-asterisk</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>At icon</td>
+<td>fa-at</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Automobile icon</td>
+<td>fa-automobile</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Ban icon</td>
+<td>fa-ban</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Bank icon</td>
+<td>fa-bank</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Bar-chart icon</td>
+<td>fa-bar-chart</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Bar-chart-o icon</td>
+<td>fa-bar-chart-o</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Barcode icon</td>
+<td>fa-barcode</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Bars icon</td>
+<td>fa-bars</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Beer icon</td>
+<td>fa-beer</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Bell icon</td>
+<td>fa-bell</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Bell-o icon</td>
+<td>fa-bell-o</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Bell-slash icon</td>
+<td>fa-bell-slash</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Bell-slash-o icon</td>
+<td>fa-bell-slash-o</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Bicycle icon</td>
+<td>fa-bicycle</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Binoculars icon</td>
+<td>fa-binoculars</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Birthday-cake icon</td>
+<td>fa-birthday-cake</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Bolt icon</td>
+<td>fa-bolt</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Bomb icon</td>
+<td>fa-bomb</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Book icon</td>
+<td>fa-book</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Bookmark icon</td>
+<td>fa-bookmark</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Bookmark-o icon</td>
+<td>fa-bookmark-o</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Briefcase icon</td>
+<td>fa-briefcase</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Bug icon</td>
+<td>fa-bug</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Building icon</td>
+<td>fa-building</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Building-o icon</td>
+<td>fa-building-o</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Bullhorn icon</td>
+<td>fa-bullhorn</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Bullseye icon</td>
+<td>fa-bullseye</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Bus icon</td>
+<td>fa-bus</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Cab icon</td>
+<td>fa-cab</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Calculator icon</td>
+<td>fa-calculator</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Calendar icon</td>
+<td>fa-calendar</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Calendar-o icon</td>
+<td>fa-calendar-o</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Camera icon</td>
+<td>fa-camera</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Camera-retro icon</td>
+<td>fa-camera-retro</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Car icon</td>
+<td>fa-car</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Caret-square-o-down icon</td>
+<td>fa-caret-square-o-down</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Caret-square-o-left icon</td>
+<td>fa-caret-square-o-left</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Caret-square-o-right icon</td>
+<td>fa-caret-square-o-right</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Caret-square-o-up icon</td>
+<td>fa-caret-square-o-up</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Cc icon</td>
+<td>fa-cc</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Certificate icon</td>
+<td>fa-certificate</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Check icon</td>
+<td>fa-check</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Check-circle icon</td>
+<td>fa-check-circle</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Check-circle-o icon</td>
+<td>fa-check-circle-o</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Check-square icon</td>
+<td>fa-check-square</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Check-square-o icon</td>
+<td>fa-check-square-o</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Child icon</td>
+<td>fa-child</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Circle icon</td>
+<td>fa-circle</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Circle-o icon</td>
+<td>fa-circle-o</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Circle-o-notch icon</td>
+<td>fa-circle-o-notch</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Circle-thin icon</td>
+<td>fa-circle-thin</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Clock-o icon</td>
+<td>fa-clock-o</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Close icon</td>
+<td>fa-close</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Cloud icon</td>
+<td>fa-cloud</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Cloud-download icon</td>
+<td>fa-cloud-download</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Cloud-upload icon</td>
+<td>fa-cloud-upload</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Code icon</td>
+<td>fa-code</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Code-fork icon</td>
+<td>fa-code-fork</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Coffee icon</td>
+<td>fa-coffee</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Cog icon</td>
+<td>fa-cog</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Cogs icon</td>
+<td>fa-cogs</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Comment icon</td>
+<td>fa-comment</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Comment-o icon</td>
+<td>fa-comment-o</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Comments icon</td>
+<td>fa-comments</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Comments-o icon</td>
+<td>fa-comments-o</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Compass icon</td>
+<td>fa-compass</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Copyright icon</td>
+<td>fa-copyright</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Credit-card icon</td>
+<td>fa-credit-card</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Crop icon</td>
+<td>fa-crop</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Crosshairs icon</td>
+<td>fa-crosshairs</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Cube icon</td>
+<td>fa-cube</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Cubes icon</td>
+<td>fa-cubes</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Cutlery icon</td>
+<td>fa-cutlery</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Dashboard icon</td>
+<td>fa-dashboard</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Database icon</td>
+<td>fa-database</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Desktop icon</td>
+<td>fa-desktop</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Dot-circle-o icon</td>
+<td>fa-dot-circle-o</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Download icon</td>
+<td>fa-download</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Edit icon</td>
+<td>fa-edit</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Ellipsis-h icon</td>
+<td>fa-ellipsis-h</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Ellipsis-v icon</td>
+<td>fa-ellipsis-v</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Envelope icon</td>
+<td>fa-envelope</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Envelope-o icon</td>
+<td>fa-envelope-o</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Envelope-square icon</td>
+<td>fa-envelope-square</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Eraser icon</td>
+<td>fa-eraser</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Exchange icon</td>
+<td>fa-exchange</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Exclamation icon</td>
+<td>fa-exclamation</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Exclamation-circle icon</td>
+<td>fa-exclamation-circle</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Exclamation-triangle icon</td>
+<td>fa-exclamation-triangle</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>External-link icon</td>
+<td>fa-external-link</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>External-link-square icon</td>
+<td>fa-external-link-square</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Eye icon</td>
+<td>fa-eye</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Eye-slash icon</td>
+<td>fa-eye-slash</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Eyedropper icon</td>
+<td>fa-eyedropper</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Fax icon</td>
+<td>fa-fax</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Female icon</td>
+<td>fa-female</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Fighter-jet icon</td>
+<td>fa-fighter-jet</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>File-archive-o icon</td>
+<td>fa-file-archive-o</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>File-audio-o icon</td>
+<td>fa-file-audio-o</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>File-code-o icon</td>
+<td>fa-file-code-o</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>File-excel-o icon</td>
+<td>fa-file-excel-o</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>File-image-o icon</td>
+<td>fa-file-image-o</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>File-movie-o icon</td>
+<td>fa-file-movie-o</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>File-pdf-o icon</td>
+<td>fa-file-pdf-o</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>File-photo-o icon</td>
+<td>fa-file-photo-o</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>File-picture-o icon</td>
+<td>fa-file-picture-o</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>File-powerpoint-o icon</td>
+<td>fa-file-powerpoint-o</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>File-sound-o icon</td>
+<td>fa-file-sound-o</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>File-video-o icon</td>
+<td>fa-file-video-o</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>File-word-o icon</td>
+<td>fa-file-word-o</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>File-zip-o icon</td>
+<td>fa-file-zip-o</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Film icon</td>
+<td>fa-film</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Filter icon</td>
+<td>fa-filter</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Fire icon</td>
+<td>fa-fire</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Fire-extinguisher icon</td>
+<td>fa-fire-extinguisher</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Flag icon</td>
+<td>fa-flag</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Flag-checkered icon</td>
+<td>fa-flag-checkered</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Flag-o icon</td>
+<td>fa-flag-o</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Flash icon</td>
+<td>fa-flash</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Flask icon</td>
+<td>fa-flask</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Folder icon</td>
+<td>fa-folder</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Folder-o icon</td>
+<td>fa-folder-o</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Folder-open icon</td>
+<td>fa-folder-open</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Folder-open-o icon</td>
+<td>fa-folder-open-o</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Frown-o icon</td>
+<td>fa-frown-o</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Futbol-o icon</td>
+<td>fa-futbol-o</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Gamepad icon</td>
+<td>fa-gamepad</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Gavel icon</td>
+<td>fa-gavel</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Gear icon</td>
+<td>fa-gear</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Gears icon</td>
+<td>fa-gears</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Gift icon</td>
+<td>fa-gift</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Glass icon</td>
+<td>fa-glass</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Globe icon</td>
+<td>fa-globe</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Graduation-cap icon</td>
+<td>fa-graduation-cap</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Group icon</td>
+<td>fa-group</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Hdd-o icon</td>
+<td>fa-hdd-o</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Headphones icon</td>
+<td>fa-headphones</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Heart icon</td>
+<td>fa-heart</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Heart-o icon</td>
+<td>fa-heart-o</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>History icon</td>
+<td>fa-history</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Home icon</td>
+<td>fa-home</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Image icon</td>
+<td>fa-image</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Inbox icon</td>
+<td>fa-inbox</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Info icon</td>
+<td>fa-info</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Info-circle icon</td>
+<td>fa-info-circle</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Institution icon</td>
+<td>fa-institution</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Key icon</td>
+<td>fa-key</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Keyboard-o icon</td>
+<td>fa-keyboard-o</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Language icon</td>
+<td>fa-language</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Laptop icon</td>
+<td>fa-laptop</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Leaf icon</td>
+<td>fa-leaf</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Legal icon</td>
+<td>fa-legal</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Lemon-o icon</td>
+<td>fa-lemon-o</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Level-down icon</td>
+<td>fa-level-down</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Level-up icon</td>
+<td>fa-level-up</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Life-bouy icon</td>
+<td>fa-life-bouy</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Life-buoy icon</td>
+<td>fa-life-buoy</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Life-ring icon</td>
+<td>fa-life-ring</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Life-saver icon</td>
+<td>fa-life-saver</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Lightbulb-o icon</td>
+<td>fa-lightbulb-o</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Line-chart icon</td>
+<td>fa-line-chart</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Location-arrow icon</td>
+<td>fa-location-arrow</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Lock icon</td>
+<td>fa-lock</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Magic icon</td>
+<td>fa-magic</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Magnet icon</td>
+<td>fa-magnet</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Mail-forward icon</td>
+<td>fa-mail-forward</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Mail-reply icon</td>
+<td>fa-mail-reply</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Mail-reply-all icon</td>
+<td>fa-mail-reply-all</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Male icon</td>
+<td>fa-male</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Map-marker icon</td>
+<td>fa-map-marker</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Meh-o icon</td>
+<td>fa-meh-o</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Microphone icon</td>
+<td>fa-microphone</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Microphone-slash icon</td>
+<td>fa-microphone-slash</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Minus icon</td>
+<td>fa-minus</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Minus-circle icon</td>
+<td>fa-minus-circle</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Minus-square icon</td>
+<td>fa-minus-square</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Minus-square-o icon</td>
+<td>fa-minus-square-o</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Mobile icon</td>
+<td>fa-mobile</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Mobile-phone icon</td>
+<td>fa-mobile-phone</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Money icon</td>
+<td>fa-money</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Moon-o icon</td>
+<td>fa-moon-o</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Mortar-board icon</td>
+<td>fa-mortar-board</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Music icon</td>
+<td>fa-music</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Navicon icon</td>
+<td>fa-navicon</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Newspaper-o icon</td>
+<td>fa-newspaper-o</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Paint-brush icon</td>
+<td>fa-paint-brush</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Paper-plane icon</td>
+<td>fa-paper-plane</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Paper-plane-o icon</td>
+<td>fa-paper-plane-o</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Paw icon</td>
+<td>fa-paw</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Pencil icon</td>
+<td>fa-pencil</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Pencil-square icon</td>
+<td>fa-pencil-square</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Pencil-square-o icon</td>
+<td>fa-pencil-square-o</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Phone icon</td>
+<td>fa-phone</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Phone-square icon</td>
+<td>fa-phone-square</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Photo icon</td>
+<td>fa-photo</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Picture-o icon</td>
+<td>fa-picture-o</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Pie-chart icon</td>
+<td>fa-pie-chart</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Plane icon</td>
+<td>fa-plane</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Plug icon</td>
+<td>fa-plug</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Plus icon</td>
+<td>fa-plus</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Plus-circle icon</td>
+<td>fa-plus-circle</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Plus-square icon</td>
+<td>fa-plus-square</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Plus-square-o icon</td>
+<td>fa-plus-square-o</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Power-off icon</td>
+<td>fa-power-off</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Print icon</td>
+<td>fa-print</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Puzzle-piece icon</td>
+<td>fa-puzzle-piece</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Qrcode icon</td>
+<td>fa-qrcode</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Question icon</td>
+<td>fa-question</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Question-circle icon</td>
+<td>fa-question-circle</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Quote-left icon</td>
+<td>fa-quote-left</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Quote-right icon</td>
+<td>fa-quote-right</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Random icon</td>
+<td>fa-random</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Recycle icon</td>
+<td>fa-recycle</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Refresh icon</td>
+<td>fa-refresh</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Remove icon</td>
+<td>fa-remove</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Reorder icon</td>
+<td>fa-reorder</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Reply icon</td>
+<td>fa-reply</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Reply-all icon</td>
+<td>fa-reply-all</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Retweet icon</td>
+<td>fa-retweet</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Road icon</td>
+<td>fa-road</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Rocket icon</td>
+<td>fa-rocket</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Rss icon</td>
+<td>fa-rss</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Rss-square icon</td>
+<td>fa-rss-square</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Search icon</td>
+<td>fa-search</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Search-minus icon</td>
+<td>fa-search-minus</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Search-plus icon</td>
+<td>fa-search-plus</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Send icon</td>
+<td>fa-send</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Send-o icon</td>
+<td>fa-send-o</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Share icon</td>
+<td>fa-share</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Share-alt icon</td>
+<td>fa-share-alt</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Share-alt-square icon</td>
+<td>fa-share-alt-square</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Share-square icon</td>
+<td>fa-share-square</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Share-square-o icon</td>
+<td>fa-share-square-o</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Shield icon</td>
+<td>fa-shield</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Shopping-cart icon</td>
+<td>fa-shopping-cart</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Sign-in icon</td>
+<td>fa-sign-in</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Sign-out icon</td>
+<td>fa-sign-out</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Signal icon</td>
+<td>fa-signal</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Sitemap icon</td>
+<td>fa-sitemap</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Sliders icon</td>
+<td>fa-sliders</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Smile-o icon</td>
+<td>fa-smile-o</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Soccer-ball-o icon</td>
+<td>fa-soccer-ball-o</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Sort icon</td>
+<td>fa-sort</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Sort-alpha-asc icon</td>
+<td>fa-sort-alpha-asc</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Sort-alpha-desc icon</td>
+<td>fa-sort-alpha-desc</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Sort-amount-asc icon</td>
+<td>fa-sort-amount-asc</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Sort-amount-desc icon</td>
+<td>fa-sort-amount-desc</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Sort-asc icon</td>
+<td>fa-sort-asc</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Sort-desc icon</td>
+<td>fa-sort-desc</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Sort-down icon</td>
+<td>fa-sort-down</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Sort-numeric-asc icon</td>
+<td>fa-sort-numeric-asc</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Sort-numeric-desc icon</td>
+<td>fa-sort-numeric-desc</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Sort-up icon</td>
+<td>fa-sort-up</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Space-shuttle icon</td>
+<td>fa-space-shuttle</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Spinner icon</td>
+<td>fa-spinner</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Spoon icon</td>
+<td>fa-spoon</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Square icon</td>
+<td>fa-square</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Square-o icon</td>
+<td>fa-square-o</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Star icon</td>
+<td>fa-star</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Star-half icon</td>
+<td>fa-star-half</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Star-half-empty icon</td>
+<td>fa-star-half-empty</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Star-half-full icon</td>
+<td>fa-star-half-full</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Star-half-o icon</td>
+<td>fa-star-half-o</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Star-o icon</td>
+<td>fa-star-o</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Suitcase icon</td>
+<td>fa-suitcase</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Sun-o icon</td>
+<td>fa-sun-o</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Support icon</td>
+<td>fa-support</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Tablet icon</td>
+<td>fa-tablet</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Tachometer icon</td>
+<td>fa-tachometer</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Tag icon</td>
+<td>fa-tag</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Tags icon</td>
+<td>fa-tags</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Tasks icon</td>
+<td>fa-tasks</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Taxi icon</td>
+<td>fa-taxi</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Terminal icon</td>
+<td>fa-terminal</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Thumb-tack icon</td>
+<td>fa-thumb-tack</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Thumbs-down icon</td>
+<td>fa-thumbs-down</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Thumbs-o-down icon</td>
+<td>fa-thumbs-o-down</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Thumbs-o-up icon</td>
+<td>fa-thumbs-o-up</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Thumbs-up icon</td>
+<td>fa-thumbs-up</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Ticket icon</td>
+<td>fa-ticket</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Times icon</td>
+<td>fa-times</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Times-circle icon</td>
+<td>fa-times-circle</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Times-circle-o icon</td>
+<td>fa-times-circle-o</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Tint icon</td>
+<td>fa-tint</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Toggle-down icon</td>
+<td>fa-toggle-down</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Toggle-left icon</td>
+<td>fa-toggle-left</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Toggle-off icon</td>
+<td>fa-toggle-off</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Toggle-on icon</td>
+<td>fa-toggle-on</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Toggle-right icon</td>
+<td>fa-toggle-right</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Toggle-up icon</td>
+<td>fa-toggle-up</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Trash icon</td>
+<td>fa-trash</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Trash-o icon</td>
+<td>fa-trash-o</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Tree icon</td>
+<td>fa-tree</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Trophy icon</td>
+<td>fa-trophy</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Truck icon</td>
+<td>fa-truck</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Tty icon</td>
+<td>fa-tty</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Umbrella icon</td>
+<td>fa-umbrella</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>University icon</td>
+<td>fa-university</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Unlock icon</td>
+<td>fa-unlock</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Unlock-alt icon</td>
+<td>fa-unlock-alt</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Unsorted icon</td>
+<td>fa-unsorted</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Upload icon</td>
+<td>fa-upload</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>User icon</td>
+<td>fa-user</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Users icon</td>
+<td>fa-users</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Video-camera icon</td>
+<td>fa-video-camera</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Volume-down icon</td>
+<td>fa-volume-down</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Volume-off icon</td>
+<td>fa-volume-off</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Volume-up icon</td>
+<td>fa-volume-up</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Warning icon</td>
+<td>fa-warning</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Wheelchair icon</td>
+<td>fa-wheelchair</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Wifi icon</td>
+<td>fa-wifi</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Wrench icon</td>
+<td>fa-wrench</td>
+<td>HTML</td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="toc_46">License</h3>
+
+<p>Bootstrap 3 - IntelliJ Plugin is open-sourced software licensed under the <a href="http://opensource.org/licenses/MIT">MIT license</a>.</p>
+
+<p>This plugin is based on <a href="https://github.com/JasonMortonNZ/bootstrap3-phpstorm-plugin">bootstrap-3-phpstorm-plugin</a> by <a href="https://twitter.com/jasonmortonnz">@JasonMortonNZ</a>,
+who did all of the hard work of creating most of the templates. </p>
+
+
+
+
+</body>
+
+</html>

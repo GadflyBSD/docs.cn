@@ -1,0 +1,84 @@
+[ 2017-06-11T09:24:32+08:00 ] ::1 /thinkphp/OneThink_1.0.1/admin.php
+ERR: 无法加载控制器:Admin.php
+
+[ 2017-06-11T10:04:40+08:00 ] ::1 /thinkphp/onethink_1.0.1/index.php?s=/install/step2.html
+ERR: 系统不支持:mysql
+
+[ 2017-06-11T10:08:20+08:00 ] ::1 /thinkphp/onethink_1.0.1/index.php?s=/admin/public/login.html
+INFO: [ app_begin ] --START--
+INFO: Run Think\Behavior\ReadHtmlCache [ RunTime:0.000022s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000204s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000018s ]
+SQL: SHOW COLUMNS FROM `onethink_ucenter_member` [ RunTime:0.000604s ]
+SQL: SELECT * FROM `onethink_ucenter_member` WHERE ( `username` = 'administrator' ) LIMIT 1   [ RunTime:0.000243s ]
+SQL: UPDATE `onethink_ucenter_member` SET `last_login_time`=1497146900,`last_login_ip`=0 WHERE ( `id` = 1 ) [ RunTime:0.000293s ]
+SQL: SHOW COLUMNS FROM `onethink_member` [ RunTime:0.000420s ]
+SQL: SELECT `uid`,`nickname`,`sex`,`birthday`,`qq`,`score`,`login`,`reg_ip`,`reg_time`,`last_login_ip`,`last_login_time`,`status` FROM `onethink_member` WHERE ( `uid` = 1 ) LIMIT 1   [ RunTime:0.000218s ]
+SQL: SHOW COLUMNS FROM `onethink_action` [ RunTime:0.000420s ]
+SQL: SELECT * FROM `onethink_action` WHERE ( `name` = 'user_login' ) LIMIT 1   [ RunTime:0.000206s ]
+SQL: SHOW COLUMNS FROM `onethink_action_log` [ RunTime:0.000471s ]
+SQL: INSERT INTO `onethink_action_log` (`action_id`,`user_id`,`action_ip`,`model`,`record_id`,`create_time`,`remark`) VALUES (1,1,0,'member',1,1497146900,'操作url：/thinkphp/onethink_1.0.1/index.php?s=/admin/public/login.html') [ RunTime:0.000207s ]
+SQL: SELECT * FROM `onethink_action` WHERE ( `name` = 'user_login' ) LIMIT 1   [ RunTime:0.000179s ]
+NOTIC: [8] Undefined offset: 1 /Users/gadflybsd/PhpstormProjects/docs.cn/thinkphp/OneThink_1.0.1/Application/Common/Common/function.php 第 605 行.
+NOTIC: [2] array_key_exists() expects parameter 2 to be array, null given /Users/gadflybsd/PhpstormProjects/docs.cn/thinkphp/OneThink_1.0.1/Application/Common/Common/function.php 第 605 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `onethink_action_log` WHERE ( `action_id` = 1 ) AND ( `user_id` = 1 ) AND ( `create_time` > 1497060500 ) LIMIT 1   [ RunTime:0.000165s ]
+SQL: SHOW COLUMNS FROM `onethink_member` [ RunTime:0.000356s ]
+SQL: UPDATE `onethink_member` SET `score`=score+10 WHERE ( uid=1 AND status>-1 ) [ RunTime:0.000266s ]
+SQL: UPDATE `onethink_member` SET `login`=`login`+1,`last_login_time`=1497146900,`last_login_ip`=0 WHERE ( `uid` = 1 ) [ RunTime:0.000126s ]
+
+[ 2017-06-11T10:09:10+08:00 ] ::1 /thinkphp/onethink_1.0.1/index.php?s=/admin/article/update.html
+INFO: [ app_begin ] --START--
+INFO: Run Think\Behavior\ReadHtmlCache [ RunTime:0.000020s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000174s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000014s ]
+SQL: SHOW COLUMNS FROM `onethink_document` [ RunTime:0.000551s ]
+SQL: SELECT `id` FROM `onethink_document` WHERE ( `root` = 0 ) AND ( `name` = 'sss' ) AND ( `id` <> '' ) LIMIT 1   [ RunTime:0.000189s ]
+NOTIC: [2] in_array() expects parameter 2 to be array, string given /Users/gadflybsd/PhpstormProjects/docs.cn/thinkphp/OneThink_1.0.1/Application/Admin/Model/DocumentModel.class.php 第 330 行.
+SQL: INSERT INTO `onethink_document` (`title`,`name`,`description`,`link_id`,`type`,`attach`,`view`,`comment`,`level`,`display`,`create_time`,`cover_id`,`id`,`pid`,`model_id`,`category_id`,`uid`,`root`,`extend`,`update_time`,`status`,`position`) VALUES ('dssdgsdg','sss','sdsdg',0,2,0,0,0,0,0,1497146950,0,0,0,2,2,1,0,0,1497146950,1,0) [ RunTime:0.001127s ]
+SQL: SHOW COLUMNS FROM `onethink_document_article` [ RunTime:0.000644s ]
+SQL: INSERT INTO `onethink_document_article` (`content`,`parse`,`template`,`bookmark`,`id`) VALUES ('sdgsdgsdgsdg',2,'',0,102) [ RunTime:0.000177s ]
+SQL: SHOW COLUMNS FROM `onethink_action` [ RunTime:0.000464s ]
+SQL: SELECT * FROM `onethink_action` WHERE ( `name` = 'add_document_blog' ) LIMIT 1   [ RunTime:0.000191s ]
+SQL: SHOW COLUMNS FROM `onethink_action_log` [ RunTime:0.000394s ]
+SQL: INSERT INTO `onethink_action_log` (`action_id`,`user_id`,`action_ip`,`model`,`record_id`,`create_time`,`remark`) VALUES (4,1,0,'document',102,1497146950,'操作url：/thinkphp/onethink_1.0.1/index.php?s=/admin/article/update.html') [ RunTime:0.000210s ]
+SQL: SELECT * FROM `onethink_action` WHERE ( `name` = 'add_document_blog' ) LIMIT 1   [ RunTime:0.000241s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `onethink_action_log` WHERE ( `action_id` = 4 ) AND ( `user_id` = 1 ) AND ( `create_time` > 1497060550 ) LIMIT 1   [ RunTime:0.000319s ]
+SQL: SHOW COLUMNS FROM `onethink_member` [ RunTime:0.000509s ]
+SQL: UPDATE `onethink_member` SET `score`=score+10 WHERE ( uid=1 ) [ RunTime:0.000366s ]
+
+[ 2017-06-11T10:09:42+08:00 ] ::1 /thinkphp/onethink_1.0.1/index.php?s=/admin/category/add/pid/1.html
+INFO: [ app_begin ] --START--
+INFO: Run Think\Behavior\ReadHtmlCache [ RunTime:0.000026s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000216s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000019s ]
+SQL: SHOW COLUMNS FROM `onethink_category` [ RunTime:0.000709s ]
+SQL: SELECT * FROM `onethink_category` WHERE ( `name` = 'test' ) LIMIT 1   [ RunTime:0.000294s ]
+NOTIC: [2] Missing argument 1 for arr2str() /Users/gadflybsd/PhpstormProjects/docs.cn/thinkphp/OneThink_1.0.1/Application/Common/Common/function.php 第 61 行.
+NOTIC: [8] Undefined variable: arr /Users/gadflybsd/PhpstormProjects/docs.cn/thinkphp/OneThink_1.0.1/Application/Common/Common/function.php 第 62 行.
+NOTIC: [2] implode(): Invalid arguments passed /Users/gadflybsd/PhpstormProjects/docs.cn/thinkphp/OneThink_1.0.1/Application/Common/Common/function.php 第 62 行.
+NOTIC: [8] Undefined index: reply_model /Users/gadflybsd/PhpstormProjects/docs.cn/thinkphp/OneThink_1.0.1/ThinkPHP/Library/Think/Model.class.php 第 950 行.
+NOTIC: [2] json_encode() expects at least 1 parameter, 0 given /Users/gadflybsd/PhpstormProjects/docs.cn/thinkphp/OneThink_1.0.1/ThinkPHP/Library/Think/Model.class.php 第 934 行.
+NOTIC: [8] Undefined index: extend /Users/gadflybsd/PhpstormProjects/docs.cn/thinkphp/OneThink_1.0.1/ThinkPHP/Library/Think/Model.class.php 第 950 行.
+SQL: INSERT INTO `onethink_category` (`title`,`name`,`allow_publish`,`check`,`model`,`type`,`display`,`reply`,`sort`,`list_row`,`meta_title`,`keywords`,`description`,`template_index`,`template_lists`,`template_detail`,`template_edit`,`id`,`pid`,`create_time`,`update_time`,`status`) VALUES ('test','test',1,0,'2','2',1,0,0,10,'','','','','','','',0,1,1497146982,1497146982,1) [ RunTime:0.000227s ]
+SQL: SHOW COLUMNS FROM `onethink_action` [ RunTime:0.000477s ]
+SQL: SELECT * FROM `onethink_action` WHERE ( `name` = 'update_category' ) LIMIT 1   [ RunTime:0.000194s ]
+SQL: SHOW COLUMNS FROM `onethink_action_log` [ RunTime:0.000380s ]
+SQL: INSERT INTO `onethink_action_log` (`action_id`,`user_id`,`action_ip`,`model`,`record_id`,`create_time`,`remark`) VALUES (11,1,0,'category',39,1497146982,'操作url：/thinkphp/onethink_1.0.1/index.php?s=/admin/category/add/pid/1.html') [ RunTime:0.000204s ]
+
+[ 2017-06-11T10:09:59+08:00 ] ::1 /thinkphp/onethink_1.0.1/index.php?s=/admin/article/move.html
+INFO: [ app_begin ] --START--
+INFO: Run Think\Behavior\ReadHtmlCache [ RunTime:0.000021s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000172s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000014s ]
+
+[ 2017-06-11T10:10:22+08:00 ] ::1 /thinkphp/onethink_1.0.1/index.php?s=/admin/article/move.html
+INFO: [ app_begin ] --START--
+INFO: Run Think\Behavior\ReadHtmlCache [ RunTime:0.000020s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000170s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000013s ]
+

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Markdown Player</title>
+	<link href="style/Skeleton/css/skeleton.css" rel="stylesheet">
+	<script src="node_modules/jquery/dist/jquery.min.js"></script>
+	<script src="node_modules/markdown-it/dist/markdown-it.min.js"></script>
+	<script>
+		window.searchMap = location.search.substr(1).split('&').reduce(function(r, it) {
+			var them = it.split('='); r[them[0]] = them[1]; return r;
+		}, {});
+		$.ajaxSetup({async: false});
+	</script>
+</head>
+<body bgcolor="white">
+
+<div class="markdown-html"><script>$.get(searchMap.md, function(text) { document.write(markdownit().render(text)); });</script></div>
+
+</body>
+</html>

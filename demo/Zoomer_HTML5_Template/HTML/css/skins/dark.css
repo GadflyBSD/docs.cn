@@ -1,0 +1,99 @@
+@charset "UTF-8";
+/* CSS Document */
+body,
+#about-us,
+.pagination ul > li > a, .pagination ul > li > span,
+.timeline-container .load-more,
+.ourservices-bg,
+.news-bg {
+	background:#2a2a2a;
+	}
+/* COLOR GRAY */
+body,
+#about-us .about-title,
+.flx-our-team-widget header .entry-title a,
+.flx-skill p.flx-skill-number,
+.flx-our-team-widget header p,
+.flx-testimonial li .testimonial-content,
+.sidebar .widget_categories ul li,
+.sidebar .widget ul li a,
+.timeline-item,
+.timeline-item .entry-body .entry-title a,
+.pagination ul > li > a, .pagination ul > li > span,
+.tweetList,
+.service-content p,
+.project-slider .slide-content ul li:before,
+.timeline-item .entry-body .entry-content .more-link:hover,
+.flx-testimonial li .testimonial-content .testimonial-name {
+	color:#777777;
+	}	
+
+/* COLOR WHITE */
+h1,h2,h3,h4,h5,
+#about-us .section-title .small-caption,
+#about-us .section-title .big-caption,
+#news .section-title .small-caption,
+#news .section-title .big-caption,
+#testimonials .section-title .small-caption,
+#testimonials .section-title .big-caption,
+#ourservices .section-title .small-caption,
+#ourservices .section-title .big-caption,
+#about-us .widget .widget-title,
+.flx-skill p.flx-skill-title,
+.sidebar .widget .widget-title,
+#logo-clients h4,
+.service-content .entry-title a {
+	color:#FFFFFF;
+}
+
+
+/* OTHER CSS */
+
+.progress-bar {
+	background:#212121;
+	}
+
+.pagination ul > li .current,
+.pagination ul > li > a:hover,
+.widget_search #searchform #s {
+	background:#262626;
+}
+#logo-clients ul li a {
+	border:#2a2a2a;
+}
+
+/* NEWS */
+.timeline-item .timeline-icon div p,
+.sidebar .widget ul,
+.sidebar .widget ul li,
+.widget_search #searchform #s,
+.timeline-item .timeline-icon .circle,
+.timeline-item .entry-body,
+.pagination ul > li > a, .pagination ul > li > span,
+.timeline-container .load-more,
+#logo-clients,
+#about-us .about-title  {
+	border-color:#323232;
+}
+#time-line,
+#timeline-dot,
+.project-slider .flex-direction-nav a {
+	background-color:#323232;
+	}
+.timeline-item .entry-body {
+	background-color:#292929;
+	}
+	
+.timeline-item .entry-body header,
+.flx-testimonial li .testimonial-avatar,
+#flx-twitter {
+	background-color:#222;
+	border-color:#333;
+}	
+.timeline-item .entry-body header .triangle {
+	background-image:url("../../images/dark/icons/triangle-timeline.png");
+	}
+#navigation {
+    background-color: rgba(0, 0, 0, 0.9);
+    border-bottom: 1px solid #333333;
+}	

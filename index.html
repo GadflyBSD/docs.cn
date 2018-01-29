@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Localhost 主机</title>
+    <link rel="stylesheet" href="node_modules/bootswatch/cyborg/bootstrap.min.css">
+</head>
+<body ng-app="app">
+<div class="container-fluid" ng-controller="navbarCtrl">
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="http://localhost"><img alt="Brand" width="20" height="20" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAAB+0lEQVR4AcyYg5LkUBhG+1X2PdZGaW3btm3btm3bHttWrPomd1r/2Jn/VJ02TpxcH4CQ/dsuazWgzbIdrm9dZVd4pBz4zx2igTaFHrhvjneVXNHCSqIlFEjiwMyyyOBilRgGSqLNF1jnwNQdIvAt48C3IlBmHCiLQHC2zoHDu6zG1iXn6+y62ScxY9AODO6w0pvAqf23oSE4joOfH6OxfMoRnoGUm+de8wykbFt6wZtA07QwtNOqKh3ZbS3Wzz2F+1c/QJY0UCJ/J3kXWJfv7VhxCRRV1jGw7XI+gcO7rEFFRvdYxydwcPsVsC0bQdKScngt4iUTD4Fy/8p7PoHzRu1DclwmgmiqgUXjD3oTKHbAt869qdJ7l98jNTEblPTkXMwetpvnftA0LLHb4X8kiY9Kx6Q+W7wJtG0HR7fdrtYz+x7iya0vkEtUULIzCjC21wY+W/GYXusRH5kGytWTLxgEEhePPwhKYb7EK3BQuxWwTBuUkd3X8goUn6fMHLyTT+DCsQdAEXNzSMeVPAJHdF2DmH8poCREp3uwm7HsGq9J9q69iuunX6EgrwQVObjpBt8z6rdPfvE8kiiyhsvHnomrQx6BxYUyYiNS8f75H1w4/ISepDZLoDhNJ9cdNUquhRsv+6EP9oNH7Iff2A9g8h8CLt1gH0Qf9NMQAFnO60BJFQe0AAAAAElFTkSuQmCC"></a>
+            </div>
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+							工具 <span class="caret"></span>
+						</a>
+						<ul class="dropdown-menu">
+							<li><a href="/phpinfo.php" target="main" ng-click="showIframe()">phpinfo
+							</a></li>
+							<li><a href="/tz.php" target="main" ng-click="showIframe()">php探针</a></li>
+							<li><a href="/phpMyAdmin/" target="_blank">phpMyAdmin</a></li>
+						</ul>
+					</li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                            文档 <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="http://bootstrap.css88.com/" target="main" ng-click="showIframe()">bootstrap 3.3.7</a></li>
+                            <li><a href="/docs/bootswatch-3.3.7" target="main" ng-click="showIframe()">bootswatch 3.3.7</a></li>
+                            <li><a href="/docs/bootstrap-angular" target="main" ng-click="showIframe()">Angular-UI-bootstrap 2.2</a></li>
+	                        <li><a href="/docs/angulat-xeditable" target="main" ng-click="showIframe()">Angular-xeditable</a></li>
+                            <li><a href="/docs/font-awesome" target="main" ng-click="showIframe()">Font-Awesome 4.7.0</a></li>
+                            <li role="separator" class="divider"></li>
+	                        <li><a href="http://www.css88.com/doc/typescript/" target="main" ng-click="showIframe()">TypeScript 2.4 中文文档</a></li>
+                            <li><a href="/docs/angular" target="main" ng-click="showIframe()">AngularJS 1.6.2</a></li>
+							<li><a href="http://www.ionic-china.com/" target="main" ng-click="showIframe()">Ionic X1 中文文档</a></li>
+							<li><a href="http://momentjs.cn/docs/" target="main" ng-click="showIframe()">Moment.js 日期处理类库</a></li>
+							<li><a href="http://www.css88.com/doc/underscore/" target="main" ng-click="showIframe()">Underscore 类库</a></li>
+							<li><a href="http://www.css88.com/doc/jsdoc/index.html" target="main" ng-click="showIframe()">JSDoc 中文文档</a></li>
+                            <li><a href="http://hemin.cn/jq/" target="_blank">jQuery 1.12.1</a></li>
+                            <li><a href="http://www.kancloud.cn/thinkphp/git-community-book/40755" target="_blank">Git Community Book 中文版</a></li>
+                            <li><a href="http://www.kancloud.cn/thinkphp/git-github-study/37918" target="_blank">Git结合GitHub常用命令学习手册</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li><a href="http://www.kancloud.cn/manual/thinkphp/1678" target="_blank">ThinkPHP3.2.3完全开发手册</a></li>
+                            <li><a href="http://www.kancloud.cn/thinkphp/thinkphp_quickstart/2138" target="_blank">ThinkPHP3.2.3快速入门</a></li>
+							<li><a href="https://www.kancloud.cn/manual/thinkphp5_1/353946" target="_blank">ThinkPHP5.1 完全开发手册</a></li>
+							<li><a href="https://www.kancloud.cn/manual/phpunit-book/68602" target="_blank">PHPUnit5.0 中文手册</a></li>
+							<li><a href="/docs/php" target="main" ng-click="showIframe()">PHP 5.6 文档</a></li>
+							<li><a href="/docs/mysql" target="main" ng-click="showIframe()">MySQL 5.7 文档</a></li>
+                        </ul>
+                    </li>
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+							DEMO <span class="caret"></span>
+						</a>
+						<ul class="dropdown-menu">
+							<li><a href="/demo/angularJS/angular-busy/" target="main" ng-click="showIframe()">angular-busy</a></li>
+							<li><a href="/demo/angularJS/angular-loading-bar/" target="main" ng-click="showIframe()">angular-loading-bar</a></li>
+							<li><a href="/node_modules/lightbox2/examples/" target="main" ng-click="showIframe()">lightbox2</a></li>
+							<li><a href="/node_modules/fancybox/demo/" target="main" ng-click="showIframe()">fancybox</a></li>
+							<li><a href="/node_modules/chart.js/samples/" target="main" ng-click="showIframe()">chart.js</a></li>
+							<li><a href="/node_modules/spin.js/.grunt/grunt-gh-pages/gh-pages/release/" target="main" ng-click="showIframe()">spin.js</a></li>
+							<li><a href="/node_modules/sweetalert/" target="main" ng-click="showIframe()">sweetalert</a></li>
+							<li><a href="/node_modules/angular-ui-tree/examples/" target="main" ng-click="showIframe()">angular-ui-tree</a></li>
+							<li><a href="/node_modules/angular-ui-switch/example/" target="main" ng-click="showIframe()">angular-ui-switch</a></li>
+							<li><a href="/demo/CoreUI-AngularJS/AngularJS_Full_Project_GULP/src" target="main" ng-click="showIframe()">CoreUI-AngularJS</a></li>
+							<li><a href="/demo/metronic_v4.5.6/start.html" target="main" ng-click="showIframe()">metronic_v4.5.6</a></li>
+							<li><a href="/demo/Zoomer_HTML5_Template/HTML/" target="main" ng-click="showIframe()">Zoomer_HTML5</a></li>
+						</ul>
+					</li>
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+							Markdown <span class="caret"></span>
+						</a>
+						<ul class="dropdown-menu">
+							<li><a href="/markdown.html?md=node_modules/angular-busy/readme.md" target="main" ng-click="showIframe()">angular-busy</a></li>
+							<li><a href="/markdown.html?md=node_modules/angular-carousel/readme.md" target="main" ng-click="showIframe()">angular-carousel</a></li>
+							<li><a href="/markdown.html?md=node_modules/angular-toastr/readme.md" target="main" ng-click="showIframe()">angular-toastr</a></li>
+							<li><a href="/markdown.html?md=node_modules/angular-filter/readme.md" target="main" ng-click="showIframe()">Angular-filter</a></li>
+							<li><a href="/markdown.html?md=node_modules/angular-file-upload/readme.md" target="main" ng-click="showIframe()">Angular File Upload</a></li>
+							<li><a href="/markdown.html?md=node_modules/angular-toasty/readme.md" target="main" ng-click="showIframe()">angular-toasty</a></li>
+							<li><a href="/markdown.html?md=node_modules/angular-loading-bar/readme.md" target="main" ng-click="showIframe()">angular-loading-bar</a></li>
+							<li><a href="/markdown.html?md=node_modules/angular-localforage/readme.md" target="main" ng-click="showIframe()">angular-localForage</a></li>
+							<li><a href="/markdown.html?md=node_modules/angular-wizard/readme.md" target="main" ng-click="showIframe()">angular-wizard</a></li>
+							<li><a href="/markdown.html?md=node_modules/ng-file-upload/readme.md" target="main" ng-click="showIframe()">ng-file-upload</a></li>
+							<li><a href="/markdown.html?md=node_modules/ng-tags-input/readme.md" target="main" ng-click="showIframe()">ng-tags-input</a></li>
+							<li><a href="/markdown.html?md=node_modules/ng-sweet-alert/readme.md" target="main" ng-click="showIframe()">ng-sweet-alert</a></li>
+							<li><a href="/markdown.html?md=node_modules/spin.js/readme.md" target="main" ng-click="showIframe()">spin.js</a></li>
+							<li><a href="/markdown.html?md=node_modules/fancygrid/readme.md" target="main" ng-click="showIframe()">fancygrid</a></li>
+							<li><a href="/markdown.html?md=node_modules/hideshowpassword/readme.md" target="main" ng-click="showIframe()">hideshowpassword</a></li>
+							<li><a href="/markdown.html?md=docs/awesome-javascript-cn/readme.md" target="main" ng-click="showIframe()">JavaScript 资源大全</a></li>
+						</ul>
+					</li>
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+							GIT 仓库<span class="caret"></span>
+						</a>
+						<ul class="dropdown-menu">
+							<li><a href="https://github.com/gadflybsd" target="_blank">github for GadflyBSD</a></li>
+							<li><a href="https://git.oschina.net/gadflybsd" target="_blank">osChina for GadflyBSD</a></li>
+						</ul>
+					</li>
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+							ThinkPHP<span class="caret"></span>
+						</a>
+						<ul class="dropdown-menu">
+							<li><a href="/thinkphp/ThinkPHP_3.2.3_full" target="_blank">ThinkPHP 3.2.3 测试</a></li>
+							<li><a href="/thinkphp/ThinkPHP_3.1.3_full" target="_blank">ThinkPHP 3.1.3 测试</a></li>
+							<li><a href="/thinkphp/thinkphp_5.0.2_full" target="_blank">ThinkPHP 5 测试</a></li>
+							<li role="separator" class="divider"></li>
+							<li><a href="/thinkphp/OneThink_1.0.1" target="_blank">OneThink 1.0.1 前台测试</a></li>
+							<li><a href="/thinkphp/OneThink_1.0.1/admin.php" target="_blank">OneThink 1.0.1 后台测试</a></li>
+							<li><a href="/thinkphp/ThinkCMFX" target="_blank">ThinkCMF 2.2.1 前台测试</a></li>
+							<li><a href="/thinkphp/ThinkCMFX/admin.php" target="_blank">ThinkCMF 2.2.1 后台测试</a></li>
+						</ul>
+					</li>
+                </ul>
+                <form class="navbar-form navbar-right" novalidate name="theForm">
+                    <div class="form-group">
+						<input type="text" class="form-control" placeholder="数据库地址" name="host"
+							   ng-change="buttonShow()" ng-model="db.host" required>
+                        <input type="text" class="form-control" placeholder="数据库用户名" name="username"
+							   ng-change="buttonShow()" ng-model="db.username" required>
+						<input type="password" class="form-control" placeholder="数据库用户密码" name="password"
+							   ng-change="buttonShow()" ng-model="db.password" required>
+						<button type="button" class="btn btn-info" ng-click="getDatabase()" ng-hide="selectDB" 
+								ng-disabled="!theForm.username.$valid || !theForm.password.$valid">数据库列表</button>
+						<select name="database" class="form-control" ng-model="db.database" required ng-hide="!selectDB"
+								ng-options="item as item.database for item in dblist track by item.database" >
+							<option value="">选择一个数据库</option>
+						</select>
+						<button type="button" class="btn btn-default" ng-click="showDataDictionary()"
+								ng-disabled="!theForm.$valid">数据字典</button>
+                    </div>
+                </form>
+            </div><!-- /.navbar-collapse -->
+        </div><!-- /.container-fluid -->
+    </nav>
+    <div class="row" style="padding-top: 70px;">
+		<div ng-hide="dataDictionary">
+			<iframe name="main" src="/phpinfo.php" scrolling="auto" frameborder="0" class="col-md-12" style="height: 800px"></iframe>
+		</div>
+		<div ng-show="dataDictionary">
+			<div class="row">
+				<div class="col-md-10 col-md-offset-1">
+					<div class="panel panel-success" ng-repeat="vo in dictionary.data">
+						<div class="panel-heading">
+							<h3 class="panel-title">数据库表名：{{vo.table_name}}</h3>
+						</div>
+						<div class="panel-body">
+							<div class="row">
+								<div class="col-md-12">表注释：{{vo.table_comment}}</div>
+								<div class="col-md-6 text-right">表引擎：{{vo.engine}}</div>
+								<div class="col-md-6 text-right">表编码字符集：{{vo.table_collation}}</div>
+							</div>
+						</div>
+						<table class="table table-hover table-bordered">
+							<tr>
+								<th class="col-md-2 text-center">字段名</th>
+								<th class="col-md-1 text-center">字段类型</th>
+								<th class="col-md-1 text-center">默认值</th>
+								<th class="col-md-1 text-center">是否允许为空</th>
+								<th class="col-md-1 text-center">字段主键</th>
+								<th class="col-md-1 text-center">额外信息</th>
+								<th class="col-md-1 text-center">字符集</th>
+								<th class="col-md-4 text-center">字段说明</th>
+							</tr>
+							<tr ng-repeat="v in vo.columns">
+								<td>{{v.column_name}}</td>
+								<td>{{v.column_type}}</td>
+								<td>{{v.column_default}}</td>
+								<td>{{v.is_nullable}}</td>
+								<td>{{v.column_key}}</td>
+								<td>{{v.extra}}</td>
+								<td>{{v.character_set_name}}</td>
+								<td>{{v.column_comment}}</td>
+							</tr>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+    </div>
+</div>
+<script type="text/javascript" src="/node_modules/jquery/dist/jquery.min.js"></script>
+<script type="text/javascript" src="/node_modules/angular/angular.min.js"></script>
+<script type="text/javascript" src="/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+<script type="text/javascript">
+	var jq = $.noConflict();
+	function isNull(param){
+		return (typeof(param) != 'undefined' && param && param !=0)?false:true;
+	}
+	function isUndefined(param){
+		return (typeof(param) != 'undefined')?false:true;
+	}
+	(function(){
+		var app = angular.module('app', []);
+		app.controller('navbarCtrl', function($scope, $http){
+			$scope.db = {}
+			$scope.selectDB = false;
+			$scope.dataDictionary = false;
+			$scope.getDatabase = function(){
+				if($scope.theForm.username.$valid && $scope.theForm.password.$valid){
+					$http.get('/thinkphp/ThinkPHP_3.2.3_full/Home/Angular/getDatabase',
+							{params: {
+								host: $scope.db.host,
+								username:	$scope.db.username,
+								password: $scope.db.password
+							}}
+					).then(function(resp){
+						if(resp.data.type == 'success'){
+							$scope.dblist = resp.data.dblist;
+							$scope.selectDB = true;
+						}
+					})
+				}
+			}
+			$scope.showIframe = function(){
+				$scope.dataDictionary = false;
+			}
+			$scope.showDataDictionary = function(){
+				$http.get('/thinkphp/ThinkPHP_3.2.3_full/Home/Angular/getDataDictionary',
+						{params: {
+							host: $scope.db.host,
+							username: $scope.db.username,
+							password: $scope.db.password,
+							database: $scope.db.database.database
+						}}
+				).then(function(resp){
+					$scope.dataDictionary = true;
+					$scope.dictionary = resp.data;
+					console.log($scope.dictionary);
+				})
+			}
+			$scope.buttonShow = function(){
+				$scope.selectDB = false;
+			}
+		});
+	}())
+</script>
+</body>
+</html>

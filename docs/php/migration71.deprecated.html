@@ -1,0 +1,38 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+ <head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <title>PHP 7.1.x 中废弃的特性</title>
+
+ </head>
+ <body><div class="manualnavbar" style="text-align: center;">
+ <div class="prev" style="text-align: left; float: left;"><a href="migration71.incompatible.html">不向后兼容的变更</a></div>
+ <div class="next" style="text-align: right; float: right;"><a href="migration71.other-changes.html">Other changes</a></div>
+ <div class="up"><a href="migration71.html">从PHP 7.0.x 移植到 PHP 7.1.x</a></div>
+ <div class="home"><a href="index.html">PHP Manual</a></div>
+</div><hr /><div id="migration71.deprecated" class="sect1">
+ <h2 class="title">PHP 7.1.x 中废弃的特性</h2>
+
+ <div class="sect2" id="migration71.deprecated.ext-mcrypt">
+  <h3 class="title">ext/mcrypt</h3>
+
+  <p class="para">
+   mcrypt 扩展已经过时了大约10年，并且用起来很复杂。因此它被废弃并且被 OpenSSL 所取代。
+   从PHP 7.2起它将被从核心代码中移除并且移到PECL中。
+  </p>
+ </div>
+
+ <div class="sect2" id="migration71.deprecated.eval-option-for-mb-ereg-replace">
+  <h3 class="title"><span class="function"><a href="function.mb-ereg-replace.html" class="function">mb_ereg_replace()</a></span>和<span class="function"><a href="function.mb-eregi-replace.html" class="function">mb_eregi_replace()</a></span>的Eval选项</h3>
+
+  <p class="para">
+   对于<span class="function"><a href="function.mb-ereg-replace.html" class="function">mb_ereg_replace()</a></span>和<span class="function"><a href="function.mb-eregi-replace.html" class="function">mb_eregi_replace()</a></span>的
+   <em>e</em>模式修饰符现在已被废弃。
+  </p>
+ </div>
+</div><hr /><div class="manualnavbar" style="text-align: center;">
+ <div class="prev" style="text-align: left; float: left;"><a href="migration71.incompatible.html">不向后兼容的变更</a></div>
+ <div class="next" style="text-align: right; float: right;"><a href="migration71.other-changes.html">Other changes</a></div>
+ <div class="up"><a href="migration71.html">从PHP 7.0.x 移植到 PHP 7.1.x</a></div>
+ <div class="home"><a href="index.html">PHP Manual</a></div>
+</div></body></html>

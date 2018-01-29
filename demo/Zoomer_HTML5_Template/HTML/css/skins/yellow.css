@@ -1,0 +1,118 @@
+@charset "UTF-8";
+
+
+::selection {
+	background: #f1c40f; /* Safari */
+	color: #FFF;
+}
+::-moz-selection {
+	background: #f1c40f; /* Firefox */
+	color:#FFF;
+}
+
+
+
+/* BACKGROUND */
+.flexible-btn:hover,
+#portfolio .load-more:hover,
+#about-us .widget .widget-title span,
+.grid figcaption,
+.timeline-item .timeline-icon .circle,
+.blog-post-slider .flex-direction-nav .flex-next,
+.blog-post-slider .flex-direction-nav .flex-prev,
+.contact-bg,
+.flx-our-team-widget .our-team-thumb .mask a,
+.contact-title span,
+.flx-skill-widget .widget-title span,
+.hi-icon-effect-3 .hi-icon:after,
+.progress-bar.flexible > span,
+.meta-box,
+.project-slider .flex-direction-nav .flex-next:hover, .project-slider .flex-direction-nav .flex-prev:hover,
+#comments h6 span, #respond h6 span,
+#arrow a:hover,
+#animate-area,
+.elements-title span,
+.list-container-2 ul li.active a,
+.list-container-2 ul li.active:hover a,
+.regular-radio:checked + label:after {
+	background-color:#f1c40f;	
+}
+
+/* COLOR */
+a,
+.flexible-btn,
+#navigation #menu li a:hover,
+#options li a:hover,
+a:hover, .timeline-item .entry-body .entry-title a:hover, .timeline-item .entry-author a:hover, .timeline-item .entry-comment a:hover, .timeline-item .entry-categories a:hover, .sidebar .widget ul li a:hover, .flx-testimonial li .testimonial-content .testimonial-name:hover, .service-content .entry-title a:hover, #page-footer #copyright a:hover, .tweetList li a:hover, .flx-our-team-widget header .entry-title a:hover,
+#navigation #menu li.current a,
+#about-us .about-title span,
+.timeline-item .timeline-icon div p,
+.timeline-item .entry-body .entry-content .more-link,
+.sidebar .widget_recent_entries ul li:before,
+.flx-testimonial li .testimonial-content .testimonial-company,
+.pagination ul > li .current, .pagination ul > li > a:hover,
+#page-footer #copyright span,
+#flx-twitter h4,
+.tweetList li a,
+.timeline-container .load-more,
+.flx-map-tagline .view-map-btn span,
+.flx-map-tagline .view-map-btn,
+.grid figcaption a.link-gallery:hover,
+.grid figcaption a.link-p-detail:hover,
+.hi-icon-effect-3b .hi-icon,
+.white-btn:hover,
+.news-page .entry-title,
+.news-page .entry-box footer .article-title,
+.flx-tag-social .tag-box a,
+.about-author .author-content footer a,
+.comment-body .comment-btn a,
+#comments-form .comment-button #submit-comment,
+.list-container-1 ul li a,
+.list-container-1 ul li.active a,
+.list-container-1 ul li:hover a,
+.wrapper-dropdown-3,
+.list-container-4 ul li.active a,
+.list-container-4 ul li.active a:hover,
+#toggle-view span,
+#toggle-view h3:hover,
+.boom-list li span,
+.accordion-title a:hover {
+	color:#f1c40f;
+}
+
+
+/* BORDER */
+.flexible-btn,
+#portfolio .load-more:hover,
+#navigation #menu li.current a,
+#options li a.selected,
+#page-footer .social-link li a:hover,
+.widget_search #searchform #s:focus,
+.contact-member,
+.flx-map-tagline .view-map-btn,
+#comments h6, #respond h6,
+#comments-form input[type="text"]:focus, #comments-form input[type="email"]:focus, #comments-form textarea:focus,
+#comments-form .comment-button #submit-comment,
+.wrapper-dropdown-2 {
+	border-color:#f1c40f;
+}
+
+.list-container-1 ul li.active a,
+.list-container-1 ul li:hover a {
+	border-top-color: #f1c40f;
+}
+
+.list-container-4 ul li.active a,
+.list-container-4 ul li.active a:hover {
+	border-bottom-color: #f1c40f;
+}
+
+.wrapper-dropdown-3:after,
+.wrapper-dropdown-5:after {
+	border-color: #f1c40f rgba(0, 0, 0, 0)
+}
+
+/*BOX SHADOW*/
+.hi-icon-effect-3 .hi-icon {
+	box-shadow:0 0 0 4px #f1c40f;
+}
