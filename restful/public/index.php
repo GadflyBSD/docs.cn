@@ -10,8 +10,10 @@
 // +----------------------------------------------------------------------
 
 // [ 应用入口文件 ]
-
+ini_set("display_errors","On");
+error_reporting(E_ALL);
 // 定义应用目录
 define('APP_PATH', __DIR__ . '/../application/');
+define('RUNTIME_PATH', __DIR__ .'/../../../Runtime/tp5.cn/');
 // 加载框架引导文件
-require __DIR__ . '/../thinkphp/start.php';
+require __DIR__ . '/../../thinkphp/thinkphp5.1/start.php';
