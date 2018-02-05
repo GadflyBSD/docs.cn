@@ -9,10 +9,14 @@
 namespace app\api\controller;
 
 use think\Controller;
-use think\Cache;
-use think\Debug;
+use think\facade\App;
+use think\facade\Cache;
+use think\facade\Debug;
+use think\facade\Request;
+//use app\api\model\Caches;
+use assistant\ProgramExeception;
 
-class api extends Controller{
+class basic extends Controller{
 	protected $request;
 
 	public function _initialize(){
@@ -24,11 +28,11 @@ class api extends Controller{
 			header('Access-Control-Allow-Headers:x-requested-with,content-type');
 			header("Access-Control-Allow-Credentials: true");
 		}
-		$this->request = request();
+		$this->request = Request::param();
 	}
 
 	public function _empty(){
-		throw new \ProgramExeception(203, '请求异常：未指定控制器方法');
+		throw new ProgramExeception(203, '请求异常：未指定控制器方法');
 	}
 
 	public function restful(){
@@ -37,6 +41,40 @@ class api extends Controller{
 
 	public function cli(){
 		return $this->response($this->run($this->request($this->getCliArgs())));
+	}
+
+	/**
+	 * 获取当前模块、控制器和方法的名称
+	 * @return array
+	 */
+	public function current(){
+		return [
+			'type'      => 'Success',
+			'code'      => 200,
+			'message'   => '成功获取当前模块、控制器和方法的名称',
+			'module'    => Request::module(),
+			'controller'=> Request::controller(),
+			'action'    => Request::action()];
+	}
+
+	public function test(){
+		/*$redis = new \Redis;
+		$redis->connect(config('redis.host'), config('redis.port'), 1);
+		$keys = $redis->keys('*dg*');
+		return $redis->del($keys);*/
+		//$data = db::name('exception')->where('code', 450)->select();
+		//$redis->set('exception_450_list', json_encode($data));
+		//return json_decode($redis->get('exception_450_list'));
+		/*$cache = Cache::init();
+		$handler = $cache->handler();
+		//$data = db::name('exception')->where('code', 10501)->select();
+		//Cache::set('exception_10501_list', json_encode($data));
+		$keys = $handler->keys('*');
+		$handler->del($keys);
+		return $handler->keys('*');*/
+		$Caches = model('Caches');
+		//$return = db::name('cache_map')->insertAll(config('cache_map'));
+		return $Caches->createMap();
 	}
 
 	protected function run($param){
@@ -51,46 +89,30 @@ class api extends Controller{
 	}
 
 	/**
-	 * 验证APP端发送过来的缓存合法性请求
-	 * @param $param
-	 * @return 返回请求结果
-	 * 		type:	请求返回类型
-	 * 		verify:	是否验证结果, true -- 需要重新缓存, false -- 不需要
-	 * 		cache:	缓存的校验数据 {name: '', pk: '', md5: '', sha1: ''}
-	 * 		data:	缓存的列表或详情数据, 所有列表数据 {name: [],...}
-	 */
-	protected function verifyCache($param, $uid = 0, $refresh = false){
-		$cache = array();
-		foreach ($param AS $key => $val){
-			$place = explode('-', $val['key']);
-			$val['uid'] = $uid;
-			$val['pk'] = ($val['pk'])?$val['pk']:$place[1];
-			$val['type'] = $val['type']?$val['type']:$place[0];
-			$val['md5'] = $val['md5']?$val['md5']:md5(time());
-			$val['sha1'] = $val['sha1']?$val['sha1']:sha1(time());
-			$cache[$val['key']] = $this->getMemcacheData($val, $refresh);
-		}
-		return $cache;
-	}
-
-	/**
 	 * # API 接口路由模式
+	 * @param $param array
+	 *      * module:       请求模块名称，默认为当前模块
+	 *      * contorller：   请求控制器名称，默认为当前控制器
+	 *      * action：       请求方法名称， 默认为当前方法
+	 *      * model：        请求模型名称， 默认为`restful`模型
+	 *
 	 * @return array
 	 */
 	protected function router($param){
-		$action = (isset($param['action']))?$param['action']:'restful';
-		$model = (isset($param['model']))?ucfirst($param['model']):'restful';
-		$module = (isset($param['module']))?ucfirst($param['module']):'restful_'.$this->request->method();
-		if($action == 'restful'){
-			if(method_exists(model($model), $module))
-				return call_user_func(array(model($model), $module), $param['data']);
+		$module = (isset($param['module']))?ucfirst($param['module']):Request::module();
+		$controller = (isset($param['controller']))?ucfirst($param['controller']):Request::controller();
+		$action = (isset($param['action']))?ucfirst($param['action']):Request::action();
+		if(isset($param['model'])){
+			$model = ucfirst($param['model']);
+			if(method_exists(App::model($module.'/'.$model), $action))
+				return call_user_func(array(App::model($module.'/'.$model), $action), $param['data']);
 			else
-				throw new \ProgramExeception(201, '系统在'.$model.'模型中没有找到'.$module.'方法');
+				throw new ProgramExeception(201, '系统在'.$model.'模型中没有找到'.$action.'方法', $param);
 		}else{
-			if(method_exists(controller($action), $module))
-				return call_user_func(array(controller($action), $module), $param['data']);
+			if(method_exists(App::controller($module.'/'.$controller), $action))
+				return call_user_func(array(App::controller($module.'/'.$controller), $action), $param['data']);
 			else
-				throw new \ProgramExeception(202, '系统在'.$action.'控制器中没有找到'.$module.'方法');
+				throw new ProgramExeception(202, '系统在'.$controller.'控制器中没有找到'.$action.'方法', $param);
 		}
 	}
 
@@ -100,11 +122,11 @@ class api extends Controller{
 	 */
 	protected function request($request){
 		$param = [
-			'data'      => $this->request->has('data')?data_format_array($request['data']):[],
-			'whose'     => $this->request->has('whose')?data_format_array($request['whose']):null,
-			'route'     => $this->request->has('route')?data_format_array($request['route']):null,
-			'check'     => $this->request->has('check')?data_format_array($request['check']):null,
-			'merge'     => $this->request->has('merge')?data_format_array($request['merge']):null,
+			'data'      => Request::has('data')?value_to_array($request['data']):[],
+			'whose'     => Request::has('whose')?value_to_array($request['whose']):null,
+			'route'     => Request::has('route')?value_to_array($request['route']):null,
+			'check'     => Request::has('check')?value_to_array($request['check']):null,
+			'merge'     => Request::has('merge')?value_to_array($request['merge']):null,
 		];
 		if(!is_null($param['whose'])){
 			if(isset($param['whose']['value']))
@@ -116,11 +138,11 @@ class api extends Controller{
 		}
 		$rsa = $this->getRsaKey(null, $whose['uid']);
 		$signature = $this->_signature([
-			'secret' => $this->request->has('secret')?$request['secret']:null,
-			'sign' => $this->request->has('sign')?$request['sign']:null
+			'secret' => Request::has('secret')?$request['secret']:null,
+			'sign' => Request::has('sign')?$request['sign']:null
 		]);
 		if($signature['type'] == 'Success'){
-			if($this->request->has('rsa_data')){
+			if(Request::has('rsa_data')){
 				if(is_string($request['rsa_data']))
 					$rsa_data = json_decode(privateKeyDecode($param['rsa_data'], $rsa['data']['server_private']), true);
 				else if(is_array($request['rsa_data']))
@@ -153,7 +175,7 @@ class api extends Controller{
 	 * @return array
 	 */
 	protected function getCliArgs(){
-		$server = $this->request->server();
+		$server = Request::server();
 		$controllerAndModule = explode('/',$server['argv'][1]);
 		$argv = [
 			'url'       => $server['argv'][0],
@@ -178,18 +200,19 @@ class api extends Controller{
 	 */
 	protected function response($data, $msg = '操作成功！', $type = 'Success', $code = '200'){
 		if(config('app_debug')){
+			Debug::remark('begin');
 			$debug = [
 				'request'   => [
-					'url'       => $this->request->url(true),
-					'header'    => $this->request->header(),
-					'module'    => $this->request->module(),
-					'controller'=> $this->request->controller(),
-					'action'    => $this->request->action(),
-					'route'     => $this->request->route(),
-					'dispatch'  => $this->request->dispatch(),
-					'request'   => $this->request->param(),
-					'method'    => $this->request->method(),
-					'ip'        => $this->request->ip(),
+					'url'       => Request::url(true),
+					'header'    => Request::header(),
+					'module'    => Request::module(),
+					'controller'=> Request::controller(),
+					'action'    => Request::action(),
+					'route'     => Request::route(),
+					'dispatch'  => Request::dispatch(),
+					'request'   => Request::param(),
+					'method'    => Request::method(),
+					'ip'        => Request::ip(),
 				],
 				'range'     => [
 					'debugTime' => Debug::getRangeTime('begin','end',6).'s',
@@ -200,55 +223,6 @@ class api extends Controller{
 			$debug = [];
 		}
 		return array_merge(['code' => $code, 'type' => $type, 'message' => $msg, 'data' => $data], $debug);
-	}
-
-	/**
-	 * # 校验指定数据的md5和sha1, 与服务器对应 则返回array('result' => true), 否则返回该缓存数据
-	 * @param $param
-	 * @param bool $refresh
-	 * @return array
-	 */
-	public function getMemcacheData($param, $refresh = false){
-		if($refresh){
-			Cache::rm($param['key']);
-			$verify = false;
-		}else{
-			$verify = Cache::get($param['key']);
-			$verify['action'] = 'getMemcache';
-		}
-		if(!$verify && !is_array($verify)){
-			$memcache = $this->setMemcacheData($param['key']);
-			$verify = $memcache['response'];
-			$verify['action'] = 'setMemcache';
-		}
-		if(isset($param['md5']) && $param['md5'] == $verify['md5'] && isset($param['sha1']) && $param['sha1'] == $verify['sha1'])
-			return array('verify' => true, 'name' => $param['type'], 'key' => $param['key']);
-		else
-			return array_merge(array('verify' => false, 'name' => $param['type']), $verify);
-	}
-
-	/**
-	 * # 缓存指定数据
-	 * @param      $key
-	 * @param null $data
-	 * @return array
-	 */
-	protected function setMemcacheData($key, $data=null){
-		$place = explode('-', $key);
-		$data = is_null($data)?$this->getDataBySQL(['type' => $place[0], 'pk' => $place[1]]):$data;
-		if(!$data || is_null($data)){
-			if(Cache::get($key)) Cache::rm($key);
-			throw new \ProgramExeception(300, '缓存 Memcached 时出错, 数据库相关数据获取失败, 请与管理员联系');
-		}else{
-			if($data['type'] == 'Error'){
-				throw new \ProgramExeception(301, $data['msg']);
-			}else{
-				$verify = array('md5' => md5(serialize($data)), 'sha1' => sha1(serialize($data)), 'key' => $key);
-				if(count($place) >= 2) $verify['pk'] = $place[count($place)-1];
-				Cache::set($key, array_merge($verify, array('data' => $data)), 2592000);
-				return array('type' => 'Success', 'msg' => '已经成功缓存数据!', 'response' => array_merge($verify, array('data' => $data)));
-			}
-		}
 	}
 
 	/**
@@ -318,15 +292,6 @@ class api extends Controller{
 		}
 	}
 
-	protected function getRsaKey($change, $uid){
-		$memcache = array('key' => 'rsa-'.$uid, 'type' => 'rsa', 'pk' => $uid, 'uid' => $uid);
-		if(in_array($change, array('createRsaKey', 'changeRsaKey'))){
-			return $this->getMemcacheData($memcache, true);
-		}else{
-			return $this->getMemcacheData($memcache);
-		}
-	}
-
 	/**
 	 * 签名验证方法, 签名认证成功后将请求数据转换成数组格式返回
 	 * @param $param
@@ -342,10 +307,10 @@ class api extends Controller{
 						return ['type'  => 'Success', 'msg' => '用户请求签名验签成功！'];
 					}else{
 						$debug = ['sign' => $param['sign'], 'signature' => strtoupper(bin2hex(\Encryption::encrypt($param['request'], self::secret)))];
-						throw new \ProgramExeception(101, '用户请求签名验证出错!', $debug);
+						throw new ProgramExeception(101, '用户请求签名验证出错!', $debug);
 					}
 				}else{
-					throw new \ProgramExeception(102, '用户请求签名验证不能为空!');
+					throw new ProgramExeception(102, '用户请求签名验证不能为空!');
 				}
 			}
 		}else{
