@@ -9,7 +9,7 @@
 namespace app\api\controller;
 
 
-class cli extends api{
+class cli extends basic{
 	public function test(){
 		$args = $this->getCliArgs();
 		return $this->response($args);

@@ -33,27 +33,28 @@
                         </a>
                         <ul class="dropdown-menu">
                             <li><a href="http://bootstrap.css88.com/" target="main" ng-click="showIframe()">bootstrap 3.3.7</a></li>
-                            <li><a href="/docs/bootswatch-3.3.7" target="main" ng-click="showIframe()">bootswatch 3.3.7</a></li>
-                            <li><a href="/docs/bootstrap-angular" target="main" ng-click="showIframe()">Angular-UI-bootstrap 2.2</a></li>
-	                        <li><a href="/docs/angulat-xeditable" target="main" ng-click="showIframe()">Angular-xeditable</a></li>
                             <li><a href="/docs/font-awesome" target="main" ng-click="showIframe()">Font-Awesome 4.7.0</a></li>
+							<li><a href="https://docs.emmet.io/cheat-sheet/" target="_blank">Emmet Cheat Sheet</a></li>
                             <li role="separator" class="divider"></li>
-	                        <li><a href="http://www.css88.com/doc/typescript/" target="main" ng-click="showIframe()">TypeScript 2.4 中文文档</a></li>
+	                        <li><a href="http://www.css88.com/doc/typescript/" target="_blank" ng-click="showIframe()">TypeScript 2.4 中文文档</a></li>
                             <li><a href="/docs/angular" target="main" ng-click="showIframe()">AngularJS 1.6.2</a></li>
-							<li><a href="http://www.ionic-china.com/" target="main" ng-click="showIframe()">Ionic X1 中文文档</a></li>
-							<li><a href="http://momentjs.cn/docs/" target="main" ng-click="showIframe()">Moment.js 日期处理类库</a></li>
-							<li><a href="http://www.css88.com/doc/underscore/" target="main" ng-click="showIframe()">Underscore 类库</a></li>
-							<li><a href="http://www.css88.com/doc/jsdoc/index.html" target="main" ng-click="showIframe()">JSDoc 中文文档</a></li>
-                            <li><a href="http://hemin.cn/jq/" target="_blank">jQuery 1.12.1</a></li>
-                            <li><a href="http://www.kancloud.cn/thinkphp/git-community-book/40755" target="_blank">Git Community Book 中文版</a></li>
-                            <li><a href="http://www.kancloud.cn/thinkphp/git-github-study/37918" target="_blank">Git结合GitHub常用命令学习手册</a></li>
-                            <li role="separator" class="divider"></li>
+							<li><a href="http://hemin.cn/jq/" target="_blank">jQuery 1.12.1</a></li>
+							<li><a href="http://www.ionic-china.com/" target="_blank" ng-click="showIframe()">Ionic X1 中文文档</a></li>
+							<li><a href="http://momentjs.cn/docs/" target="_blank" ng-click="showIframe()">Moment.js 日期处理类库</a></li>
+							<li><a href="http://www.css88.com/doc/underscore/" target="_blank" ng-click="showIframe()">Underscore 工具类库</a></li>
+							<li><a href="http://www.css88.com/doc/jsdoc/index.html" target="_blank" ng-click="showIframe()">JSDoc 中文文档</a></li>
+							<li role="separator" class="divider"></li>
                             <li><a href="http://www.kancloud.cn/manual/thinkphp/1678" target="_blank">ThinkPHP3.2.3完全开发手册</a></li>
                             <li><a href="http://www.kancloud.cn/thinkphp/thinkphp_quickstart/2138" target="_blank">ThinkPHP3.2.3快速入门</a></li>
 							<li><a href="https://www.kancloud.cn/manual/thinkphp5_1/353946" target="_blank">ThinkPHP5.1 完全开发手册</a></li>
 							<li><a href="https://www.kancloud.cn/manual/phpunit-book/68602" target="_blank">PHPUnit5.0 中文手册</a></li>
+							<li><a href="https://blog.fondme.cn/apidoc/jdk-1.8-baidu/" target="_blank" ng-click="showIframe()">Java™ Standard Edition 8 API 文档（百度）</a></li>
 							<li><a href="/docs/php" target="main" ng-click="showIframe()">PHP 5.6 文档</a></li>
 							<li><a href="/docs/mysql" target="main" ng-click="showIframe()">MySQL 5.7 文档</a></li>
+							<li><a href="http://www.postgres.cn/docs/9.6/index.html" target="_blank" ng-click="showIframe()">PostgreSQL 9.6.0 手册</a></li>
+							<li role="separator" class="divider"></li>
+							<li><a href="http://www.kancloud.cn/thinkphp/git-community-book/40755" target="_blank">Git Community Book 中文版</a></li>
+							<li><a href="http://www.kancloud.cn/thinkphp/git-github-study/37918" target="_blank">Git结合GitHub常用命令学习手册</a></li>
                         </ul>
                     </li>
 					<li class="dropdown">
@@ -61,6 +62,9 @@
 							DEMO <span class="caret"></span>
 						</a>
 						<ul class="dropdown-menu">
+							<li><a href="/docs/bootswatch-3.3.7" target="main" ng-click="showIframe()">bootswatch 3.3.7</a></li>
+							<li><a href="/docs/bootstrap-angular" target="main" ng-click="showIframe()">Angular-UI-bootstrap 2.2</a></li>
+							<li><a href="/docs/angulat-xeditable" target="main" ng-click="showIframe()">Angular-xeditable</a></li>
 							<li><a href="/demo/angularJS/angular-busy/" target="main" ng-click="showIframe()">angular-busy</a></li>
 							<li><a href="/demo/angularJS/angular-loading-bar/" target="main" ng-click="showIframe()">angular-loading-bar</a></li>
 							<li><a href="/node_modules/lightbox2/examples/" target="main" ng-click="showIframe()">lightbox2</a></li>
@@ -146,7 +150,7 @@
     </nav>
     <div class="row" style="padding-top: 70px;">
 		<div ng-hide="dataDictionary">
-			<iframe name="main" src="/phpinfo.php" scrolling="auto" frameborder="0" class="col-md-12" style="height: 800px"></iframe>
+			<iframe name="main" src="/phpinfo.php" scrolling="auto" frameborder="0" class="col-md-12" ng-style="inner"></iframe>
 		</div>
 		<div ng-show="dataDictionary">
 			<div class="row">
@@ -207,6 +211,9 @@
 			$scope.db = {}
 			$scope.selectDB = false;
 			$scope.dataDictionary = false;
+			$scope.inner = {
+				height: window.innerHeight - 83
+			}
 			$scope.getDatabase = function(){
 				if($scope.theForm.username.$valid && $scope.theForm.password.$valid){
 					$http.get('/thinkphp/ThinkPHP_3.2.3_full/Home/Angular/getDatabase',
