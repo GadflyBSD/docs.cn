@@ -51,12 +51,8 @@
 			},
 			baidu_ak: 'sUVxgOPLFQpoNH8j3rHWUGQVtPV99O8K'
 		});
-		app.run(function($rootScope, $state, $breadcrumb) {
-			$rootScope.isActive = function(stateName) {
-				return $state.includes(stateName);
-			}
-		})
 		app.config(function($stateProvider, $httpProvider, $urlRouterProvider, $ocLazyLoadProvider, $indexedDBProvider, app_config) {
+			console.log('01.app.config');
 			$httpProvider.defaults.headers = app_config.headers;
 			$httpProvider.defaults.cache = app_config.cache.restful;
 			$httpProvider.defaults.transformRequest = function (obj) {
@@ -78,11 +74,9 @@
 					userInfoStore.createIndex('uid', 'uid', {unique: false});
 				});
 			$urlRouterProvider.otherwise('/home');
-
 			$ocLazyLoadProvider.config({
 				//debug: true
 			});
-
 			$stateProvider.state('app', {
 				abstract: true,
 				templateUrl: 'views/layouts/app.html',
@@ -226,6 +220,12 @@
 				templateUrl: 'views/full/valid.html',
 				controller: 'fullFormCtrl'
 			})
+		});
+		app.run(function($rootScope, $state, $breadcrumb) {
+			console.log('02.app.run');
+			$rootScope.isActive = function(stateName) {
+				return $state.includes(stateName);
+			}
 		});
 	}())
 </script>
