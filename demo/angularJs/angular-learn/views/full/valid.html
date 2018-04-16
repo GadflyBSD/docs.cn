@@ -1,0 +1,36 @@
+<div class="panel panel-default">
+	<div class="panel-heading">
+		<h3 class="panel-title" ng-bind-html="description"></h3>
+	</div>
+	<div class="panel-body">
+		<form name="theForm01" ng-submit="submit()">
+			<div class="form-group">
+				<label>Email address</label>
+				<input type="email" class="form-control" name="email" ng-model="form.email" placeholder="Email" required>
+				<span class="text-danger" ng-show="theForm01.email.$error.required">邮箱是必须填写的!</span>
+				<span class="text-warning" ng-show="theForm01.email.$error.email">非法的邮箱格式。</span><br>
+				<code>Email = {{form.email}}</code><br>
+				<code>theForm01.email.$valid = {{theForm01.email.$valid}}</code><br>
+				<code>theForm01.email.$error = {{theForm01.email.$error}}</code><br>
+				<code>theForm01.$valid = {{theForm01.$valid}}</code><br>
+				<code>theForm01.$invalid = {{theForm01.$invalid}}</code>
+			</div>
+			<div class="form-group">
+				<label>Password</label>
+				<input type="text" class="form-control" name="nickname" ng-model="form.nickname" placeholder="nickname" required>
+				<span class="text-danger" ng-show="theForm01.nickname.$error.required">昵称必须填写!</span><br>
+				<code>nickname = {{form.nickname}}</code><br>
+				<code>theForm01.nickname.$valid = {{theForm01.nickname.$valid}}</code><br>
+				<code>theForm01.nickname.$error = {{theForm01.nickname.$error}}</code><br>
+				<code>theForm01.$valid = {{theForm01.$valid}}</code><br>
+				<code>theForm01.$invalid = {{theForm01.$invalid}}</code>
+			</div>
+			<div class="form-group">
+				<button type="submit" class="btn btn-default" ng-disabled="!theForm01.$valid">
+					<span ng-show="theForm01.$valid">表单提交</span>
+					<span ng-hide="theForm01.$valid">表单填写不完整</span>
+				</button>
+			</div>
+		</form>
+	</div>
+</div>

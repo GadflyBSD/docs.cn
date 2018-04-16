@@ -1,0 +1,20 @@
+<div class="panel panel-default">
+	<div class="panel-heading">
+		<h3 class="panel-title" ng-bind-html="description"></h3>
+	</div>
+	<div class="panel-body">
+		<form name="theForm" ng-submit="submit()">
+			<div class="form-group">
+				<label>Email address</label>
+				<input type="email" class="form-control" ng-model="form.email" placeholder="Email">
+			</div>
+			<div class="form-group">
+				<label>Password</label>
+				<input type="text" class="form-control" ng-model="form.nickname" placeholder="nickname">
+			</div>
+			<div class="form-group">
+				<button type="submit" class="btn btn-default">Submit</button>
+			</div>
+		</form>
+	</div>
+</div>

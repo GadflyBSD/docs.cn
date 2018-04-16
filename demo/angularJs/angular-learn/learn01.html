@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Title</title>
+	<link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+<body ng-app="app">
+<div class="container-fluid" ng-controller="navbarCtrl">
+</div>
+<script type="text/javascript" src="https://cdn.bootcss.com/angular.js/1.6.9/angular.min.js"></script>
+<script type="text/javascript" src="https://cdn.bootcss.com/angular-ui-bootstrap/2.5.0/ui-bootstrap-tpls.min.js"></script>
+<script type="text/javascript">
+	(function(){
+		var app = angular.module('app', []);
+		app.controller('navbarCtrl', function($scope, $http){
+			$scope.input = {}
+			$http.get('list.json', {}).then(function (result) {
+				console.log(result);
+			})
+			console.log('ddd');
+		});
+	}());
+</script>
+</body>
+</html>

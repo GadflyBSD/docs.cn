@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+<head>
+	<meta charset="UTF-8">
+	<title>Sample app</title>
+	<link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+<ui-view></ui-view>
+</div>
+<script type="text/javascript" src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdn.bootcss.com/angular.js/1.6.9/angular.min.js"></script>
+<script type="text/javascript" src="https://cdn.bootcss.com/angular-breadcrumb/0.5.0/angular-breadcrumb.min.js"></script>
+<script type="text/javascript" src="https://cdn.bootcss.com/angular-ui-router/1.0.3/angular-ui-router.min.js"></script>
+<script type="text/javascript" src="https://cdn.bootcss.com/oclazyload/1.1.0/ocLazyLoad.min.js"></script>
+<script type="text/javascript" src="https://cdn.bootcss.com/angular-ui-bootstrap/2.5.0/ui-bootstrap-tpls.min.js"></script>
+<script type="text/javascript" src="lib/angular-indexedDB/angular-indexed-db.min.js"></script>
+<script type="text/javascript">
+	(function(){
+		var app = angular.module('app', ['ui.router','ui.bootstrap', 'oc.lazyLoad', 'indexedDB', 'ncy-angular-breadcrumb']);
+		app.constant('app_config', {
+			debug: {
+				init: true,
+				jpush: true,
+				home: true,
+				ios: false,
+				socket: true,
+			},
+			db_name: 'indexedDB',
+			url: {
+				webstock: 'ws://api.masses.cn:9504/?keygen=',
+				restful: 'http://api.masses.cn/restful.php?s=api',
+				domain: 'http://manage.hzxiansheng.com/',
+			},
+			timeout: {
+				sendSmsWait: 60,            // 再次发送短信验证码后的等待时间
+				cache: 5*60*1000,           // 本地缓存时间
+				extended: 2000,             // 提示弹框自动关闭时间
+				duration: 10000,            // 加载数据最长自动关闭时间
+				restful: 1000 * 15          // restful 超时时间
+			},
+			headers: {
+				post: {'Content-Type': 'application/x-www-form-urlencoded'},
+				get: {'Content-Type': 'application/x-www-form-urlencoded'},
+				put: {'Content-Type': 'application/x-www-form-urlencoded'},
+				delete: {'Content-Type': 'application/x-www-form-urlencoded'},
+				options: {'Content-Type': 'application/x-www-form-urlencoded'},
+			},
+			cache: {
+				restful: false
+			},
+			baidu_ak: 'sUVxgOPLFQpoNH8j3rHWUGQVtPV99O8K'
+		});
+		app.run(function($rootScope, $state, $breadcrumb) {
+			$rootScope.isActive = function(stateName) {
+				return $state.includes(stateName);
+			}
+		})
+		app.config(function($stateProvider, $httpProvider, $urlRouterProvider, $ocLazyLoadProvider, $indexedDBProvider, app_config) {
+			$httpProvider.defaults.headers = app_config.headers;
+			$httpProvider.defaults.cache = app_config.cache.restful;
+			$httpProvider.defaults.transformRequest = function (obj) {
+				var str = [];
+				for (var p in obj) {
+					str.push(encodeURIComponent(p) + "=" + encodeURIComponent(obj[p]));
+				}
+				return str.join("&");
+			};
+			$indexedDBProvider
+				.connection('learnIndexedDB')
+				.upgradeDatabase(2, function (event, db, tx) {
+					console.log(db);
+					var verifyCacheStore = db.createObjectStore('verify_cache', {keyPath: 'key', autoIncrement: true});
+					verifyCacheStore.createIndex('storage', 'storage', {unique: false});
+					verifyCacheStore.createIndex('table', 'table', {unique: false});
+					verifyCacheStore.createIndex('pk', 'pk', {unique: false});
+					var userInfoStore = db.createObjectStore('userInfo', {keyPath: 'key', autoIncrement: true});
+					userInfoStore.createIndex('uid', 'uid', {unique: false});
+				});
+			$urlRouterProvider.otherwise('/home');
+
+			$ocLazyLoadProvider.config({
+				//debug: true
+			});
+
+			$stateProvider.state('app', {
+				abstract: true,
+				templateUrl: 'views/layouts/app.html',
+				resolve: {
+					loadCSS: ['$ocLazyLoad', function($ocLazyLoad) {
+						return $ocLazyLoad.load([{
+							serie: true,
+							name: 'Font Awesome',
+							files: ['https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css']
+						}]);
+					}],
+					loadPlugin: ['$ocLazyLoad', function ($ocLazyLoad) {
+						return $ocLazyLoad.load([{
+							serie: true,
+							name: 'chart.js',
+							files: [
+								'https://cdn.bootcss.com/Chart.js/2.7.2/Chart.min.js',
+								'https://cdn.bootcss.com/angular-chart.js/1.1.1/angular-chart.min.js'
+							]
+						}]);
+					}],
+					loadCtrl: ['$ocLazyLoad', function($ocLazyLoad) {
+						return $ocLazyLoad.load({
+							files: ['js/controllers.js']
+						});
+					}]
+				},
+				controller: 'appCtrl'
+			})
+			.state('full', {
+				abstract: true,
+				templateUrl: 'views/layouts/full.html',
+				resolve: {
+					loadCSS: ['$ocLazyLoad', function($ocLazyLoad) {
+						return $ocLazyLoad.load([{
+							serie: true,
+							name: 'Font Awesome',
+							files: ['https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css']
+						}]);
+					}],
+					loadPlugin: ['$ocLazyLoad', function ($ocLazyLoad) {
+						return $ocLazyLoad.load([{
+							serie: true,
+							name: 'chart.js',
+							files: [
+								'https://cdn.bootcss.com/Chart.js/2.7.2/Chart.min.js',
+								'https://cdn.bootcss.com/angular-chart.js/1.1.1/angular-chart.min.js'
+							]
+						}]);
+					}],
+					loadCtrl: ['$ocLazyLoad', function($ocLazyLoad) {
+						return $ocLazyLoad.load({
+							files: ['js/controllers.js']
+						});
+					}]
+				},
+				controller: 'fullCtrl'
+			})
+			.state('app.home', {
+				url: '/home',
+				ncyBreadcrumb: {
+					label: 'home',
+					description: '首页详细说明 <code>ui-sref="app.home"</code> OR <code>ng-href="#/home"</code> JS <code>$state.go("/appHome", {});</code>'
+				},
+				resolve: {
+					loadCtrl: function($ocLazyLoad) {
+						return $ocLazyLoad.load([
+							'js/controllers.js',
+						]);
+					}
+				},
+				templateUrl: 'views/layouts/home.html',
+				controller: 'homeCtrl'
+			})
+			.state('app.page01', {
+				url: '/appPage01',
+				ncyBreadcrumb: {
+					label: 'APP Page01',
+					description: 'JSON数据以HTTP请求方式异步加载 <code>ui-sref="app.page01"</code> OR <code>ng-href="#/appPage01"</code> JS <code>$state.go("/appPage01", {});</code>'
+				},
+				resolve: {
+					loadCtrl: function($ocLazyLoad) {
+						return $ocLazyLoad.load([
+							'js/controllers.js',
+						]);
+					}
+				},
+				templateUrl: 'views/app/page01.html',
+				controller: 'appPage01Ctrl'
+			})
+			.state('app.page02', {
+				url: '/appPage02',
+				ncyBreadcrumb: {
+					label: 'APP Page02',
+					description: 'JSON数据以HTTP请求方式预加载 <code>ui-sref="app.page02"</code> OR <code>ng-href="#/appPage02"</code> JS <code>$state.go("/appPage02", {});</code>'
+				},
+				resolve: {
+					loadCtrl: function($ocLazyLoad) {
+						return $ocLazyLoad.load([
+							'js/controllers.js',
+						]);
+					},
+					loadData: function($http){
+						return $http.get('list.json', {}).then(function (result) {
+							return result.data;
+						});
+					}
+				},
+				templateUrl: 'views/app/page01.html',
+				controller: 'appPage02Ctrl'
+			})
+			.state('full.form', {
+				url: '/fullForm',
+				ncyBreadcrumb: {
+					label: 'Full Form',
+					description: 'AngularJS 表单操作 <code>ui-sref="full.form"</code> OR <code>ng-href="#/fullForm"</code> JS <code>$state.go("/fullForm", {});</code>'
+				},
+				resolve: {
+					loadCtrl: function($ocLazyLoad) {
+						return $ocLazyLoad.load([
+							'js/controllers.js',
+						]);
+					}
+				},
+				templateUrl: 'views/full/form.html',
+				controller: 'fullFormCtrl'
+			})
+			.state('full.valid', {
+				url: '/fullValid',
+				ncyBreadcrumb: {
+					label: 'Full Form Valid',
+					description: 'AngularJS 表单验证操作 <code>ui-sref="full.valid"</code> OR <code>ng-href="#/fullValid"</code> JS <code>$state.go("/fullValid", {});</code>'
+				},
+				resolve: {
+					loadCtrl: function($ocLazyLoad) {
+						return $ocLazyLoad.load([
+							'js/controllers.js',
+						]);
+					}
+				},
+				templateUrl: 'views/full/valid.html',
+				controller: 'fullFormCtrl'
+			})
+		});
+	}())
+</script>
+</body>
+</html>
